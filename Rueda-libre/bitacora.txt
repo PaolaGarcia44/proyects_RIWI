@@ -1,0 +1,2 @@
+en esta pagina será html la estructura, css la carpinteria que son los estilos,
+y js sera el que haga funcionar todo al tiempo.
