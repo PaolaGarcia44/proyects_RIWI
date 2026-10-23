@@ -1,2 +1,51 @@
-en esta pagina será html la estructura, css la carpinteria que son los estilos,
-y js sera el que haga funcionar todo al tiempo.
+
+	BITÁCORA
+
+	Análisis de la petición al servidor
+	La petición al servidor debe entregar el documento HTML principal. El navegador interpreta el HTML y, al encontrar las referencias a CSS y JavaScript, solicita también esos recursos mediante rutas relativas al archivo HTML. El servidor debe responder con el contenido correcto y los tipos MIME correspondientes; si una ruta es incorrecta, el recurso devuelve un error 404 y la página puede perder estilos o funcionalidad.
+
+	Roles de HTML, CSS y JavaScript
+	- HTML: define la estructura y el contenido semántico de la página.
+	- CSS: controla la presentación, el diseño, los colores, el espaciado y la adaptación a distintos tamaños de pantalla.
+	
+
+	Tabla de rutas relativas
+
+	| Archivo de origen | Destino | Ruta escrita |
+	|---|---|---|
+	| index.html | styles.css | ./styles.css |
+	| index.html | script.js | ./script.js |
+	| index.html | img/logo.png | ./img/logo.png |
+	| paginas/contacto.html | styles.css | ../styles.css |
+	| paginas/contacto.html | script.js | ../script.js |
+	| paginas/contacto.html | img/logo.png | ../img/logo.png |
+
+	Las rutas se escriben relativas al directorio del archivo de origen: `./` representa el directorio actual y `../` sube un nivel.
+
+		Esquema de regiones de cada página
+
+		Página principal: index.html
+		┌──────────────────────────────────────────────┐
+		│ ENCABEZADO                                   │
+		├──────────────────────────────────────────────┤
+		│ NAVEGACIÓN                                   │
+		├──────────────────────────────────────────────┤
+		│ CONTENIDO PRINCIPAL                          │
+		│ ┌──────────────────────────────────────────┐ │
+		│ │ SECCIÓN                                  │ │
+		│ │  ┌────────────────────────────────────┐  │ │
+		│ │  │ ARTÍCULO                           │  │ │
+		│ │  └────────────────────────────────────┘  │ │
+		│ └──────────────────────────────────────────┘ │
+		│ CONTENIDO COMPLEMENTARIO                    │
+		├──────────────────────────────────────────────┤
+		│ PIE                                          │
+		└──────────────────────────────────────────────┘
+
+	Comparación entre DAY1.html y DAY2.html: etiquetas div y span
+
+	- En DAY1.html se utilizaron dos etiquetas `<div>` como contenedores para las imágenes y sus textos.
+	- En DAY2.html esas etiquetas `<div>` fueron eliminadas y reemplazadas por etiquetas `<section>`, porque cada bloque representa una sección independiente del contenido.
+	- La etiqueta `<article>` también se incorporó en DAY2.html para agrupar el contenido específico del servicio de alquiler de bicicletas.
+
+	
