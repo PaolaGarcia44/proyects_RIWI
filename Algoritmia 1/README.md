@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Estas son las dos pruebas por programa
 
 EdadEnDias:
@@ -17,9 +17,6 @@ Propinas:
 
 Saludo:
 ![alt text](image-2.png)
-
-=======
-Estas son las dos pruebas por programa
 
 EdadEnDias:
 ![alt text](image.png)
