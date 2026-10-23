@@ -48,4 +48,23 @@
 	- En DAY2.html esas etiquetas `<div>` fueron eliminadas y reemplazadas por etiquetas `<section>`, porque cada bloque representa una sección independiente del contenido.
 	- La etiqueta `<article>` también se incorporó en DAY2.html para agrupar el contenido específico del servicio de alquiler de bicicletas.
 
+	Selección de controles para los datos del cliente
+
+	- Nombre completo: campo de texto.
+	- Número de documento: campo de texto, porque puede contener distintos formatos y no se utiliza para cálculos.
+	- Correo electrónico: campo de tipo email, para validar que tenga un formato de correo.
+	- Celular: campo de tipo tel, porque corresponde a un número telefónico.
+	- Fecha de alquiler: campo de tipo date, para facilitar la selección de una fecha válida.
+	- Tipo de bicicleta: lista desplegable, cuando las opciones disponibles son limitadas.
+	- Plan: lista desplegable, porque el cliente debe elegir uno entre varios planes definidos.
+	- Cantidad de bicicletas: campo de tipo number, porque representa una cantidad numérica.
+	- Recorrido guiado: opciones únicas mediante una lista con “Sí” y “No”, ya que solo se puede escoger una alternativa.
+	- Comentarios adicionales: área de texto, porque permite escribir información libre y extensa.
+	- Aceptación de políticas: casilla de verificación, porque registra una decisión afirmativa obligatoria.
+
+	Justificación de tres elecciones
+
+	El campo de correo electrónico es adecuado porque el navegador puede comprobar su formato antes de enviar el formulario. La lista desplegable para el plan evita respuestas diferentes para las mismas opciones y facilita la selección. 
+    La casilla de verificación para las políticas permite confirmar de forma explícita la aceptación; además, al ser obligatoria, impide enviar la reserva sin dicha autorización.
+
 	
