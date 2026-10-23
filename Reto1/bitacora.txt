@@ -13,9 +13,9 @@
 
 	| Archivo de origen | Destino | Ruta escrita |
 	|---|---|---|
-	| index.html | styles.css | ./styles.css |
-	| index.html | script.js | ./script.js |
-	| index.html | img/logo.png | ./img/logo.png |
+	| DAY1.html| styles.css | ./styles.css |
+	| DAY1.html| script.js | ./script.js |
+	| DAY1.html | img/logo.png | ./img/logo.png |
 	| paginas/contacto.html | styles.css | ../styles.css |
 	| paginas/contacto.html | script.js | ../script.js |
 	| paginas/contacto.html | img/logo.png | ../img/logo.png |
@@ -24,7 +24,7 @@
 
 		Esquema de regiones de cada página
 
-		Página principal: index.html
+		Página principal: DAY1.html
 		┌──────────────────────────────────────────────┐
 		│ ENCABEZADO                                   │
 		├──────────────────────────────────────────────┤
@@ -67,4 +67,5 @@
 	El campo de correo electrónico es adecuado porque el navegador puede comprobar su formato antes de enviar el formulario. La lista desplegable para el plan evita respuestas diferentes para las mismas opciones y facilita la selección. 
     La casilla de verificación para las políticas permite confirmar de forma explícita la aceptación; además, al ser obligatoria, impide enviar la reserva sin dicha autorización.
 
+	
 	

@@ -61,19 +61,19 @@
                     <legend><strong>Tus Datos</strong></legend>
 
                     <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" minlength="3" required >
                     <br><br>
 
                     <label for="documento">Número de documento:</label>
-                    <input type="text" id="documento" name="documento" required>
+                    <input type="int" id="documento" name="documento"  pattern="[0-9]{6,10}"required>
                     <br><br>
 
                     <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" required>
+                    <input type="email" id="correo" name="correo"  required>
                     <br><br>
 
                     <label for="celular">Celular:</label>
-                    <input type="tel" id="celular" name="celular" required>
+                    <input type="tel" id="celular" name="celular" required minlength="10" maxlength="10" pattern="3[0-9]{9}"" title="Debes colocar en números y comenzando desde 3"">
                     <br><br>
                 </fieldset>
 
@@ -81,11 +81,17 @@
                     <legend><strong>Tu Alquiler</strong></legend>
 
                     <label for="fecha">Fecha de alquiler:</label>
-                    <input type="date" id="fecha" name="fecha" required>
+                    <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
                     <br><br>
 
                     <label for="tipo">Tipo de bicicleta:</label>
-                    <input type="text" id="tipo" name="tipo" required>
+                    <select id="tipo de cicla" name="tipo de cicla" required>
+                        <option value="">Seleccione una opción</option>
+                      <option value="Plan1">Urbana</option>
+                        <option value="Plan2">Montaña</option>
+                        <option value="Plan3">Reto para palmas</option>
+                        <option value="Plan3">No quiero un recorrido guiado</option>
+                    </select>
                     <br><br>
 
                     <label for="plan">Plan:</label>
@@ -98,14 +104,16 @@
                     <br><br>
 
                     <label for="cantidad">Cantidad de bicicletas:</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" required>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="6" required>
                     <br><br>
 
                     <label for="recorrido-guiado">Recorrido guiado:</label>
                     <select id="recorrido-guiado" name="recorrido-guiado" required>
                         <option value="">Seleccione una opción</option>
-                        <option value="si">Sí</option>
-                        <option value="no">No</option>
+                      <option value="Plan1">Río y parques</option>
+                        <option value="Plan2">Sabores de barrio</option>
+                        <option value="Plan3">Reto palmas</option>
+                        <option value="Plan3">No quiero un recorrido guiado</option>
                     </select>
                     <br><br>
                 </fieldset>
@@ -122,11 +130,7 @@
                               cols="80"></textarea>
                     <br><br>
 
-                    <input type="checkbox"
-                           id="politicas"
-                           name="politicas"
-                           required>
-
+                    <input type="checkbox" id="politicas"name="politicas"  required>
                     <label for="politicas">
                         Acepto las políticas de reserva.
                     </label>
