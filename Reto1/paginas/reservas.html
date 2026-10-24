@@ -22,14 +22,12 @@
             </details>
         </nav>
 
-        <center>
-            <img src="../img/logo.png"
-                 alt="Logo de Rueda Libre"
-                 width="200"
-                 height="200">
+        <img src="../img/logo.png"
+             alt="Logo de Rueda Libre"
+             width="200"
+             height="200">
 
-            <h1>Reserva de bicicletas</h1>
-        </center>
+        <h1>Reserva de bicicletas</h1>
     </header>
 
     <main>
@@ -61,19 +59,19 @@
                     <legend><strong>Tus Datos</strong></legend>
 
                     <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" minlength="3" required >
+                    <input type="text" id="nombre" name="nombre" minlength="3" required>
                     <br><br>
 
                     <label for="documento">Número de documento:</label>
-                    <input type="int" id="documento" name="documento"  pattern="[0-9]{6,10}"required>
+                    <input type="text" id="documento" name="documento" pattern="[0-9]{6,10}" required title="Debes colocar entre 6 y 10 dígitos">
                     <br><br>
 
                     <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo"  required>
+                    <input type="email" id="correo" name="correo" required>
                     <br><br>
 
                     <label for="celular">Celular:</label>
-                    <input type="tel" id="celular" name="celular" required minlength="10" maxlength="10" pattern="3[0-9]{9}"" title="Debes colocar en números y comenzando desde 3"">
+                    <input type="tel" id="celular" name="celular" required minlength="10" maxlength="10" pattern="3[0-9]{9}" title="Debes colocar 10 dígitos y comenzar por 3">
                     <br><br>
                 </fieldset>
 
@@ -85,7 +83,7 @@
                     <br><br>
 
                     <label for="tipo">Tipo de bicicleta:</label>
-                    <select id="tipo de cicla" name="tipo de cicla" required>
+                    <select id="tipo" name="tipo" required>
                         <option value="">Seleccione una opción</option>
                       <option value="Plan1">Urbana</option>
                         <option value="Plan2">Montaña</option>
@@ -110,7 +108,7 @@
                     <label for="recorrido-guiado">Recorrido guiado:</label>
                     <select id="recorrido-guiado" name="recorrido-guiado" required>
                         <option value="">Seleccione una opción</option>
-                      <option value="Plan1">Río y parques</option>
+                        <option value="Plan1">Río y parques</option>
                         <option value="Plan2">Sabores de barrio</option>
                         <option value="Plan3">Reto palmas</option>
                         <option value="Plan3">No quiero un recorrido guiado</option>
@@ -119,7 +117,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend><strong>Confimacion</strong></legend>
+                    <legend><strong>Confirmación</strong></legend>
 
                     <label for="comentarios">Comentarios adicionales:</label>
                     <br>
@@ -130,7 +128,7 @@
                               cols="80"></textarea>
                     <br><br>
 
-                    <input type="checkbox" id="politicas"name="politicas"  required>
+                    <input type="checkbox" id="politicas" name="politicas" required>
                     <label for="politicas">
                         Acepto las políticas de reserva.
                     </label>

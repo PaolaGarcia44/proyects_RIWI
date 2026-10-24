@@ -1,71 +1,293 @@
+BITACORA DEL RETO 1: RUEDA LIBRE
 
-	BITÁCORA
+1. Objetivo
 
-	Análisis de la petición al servidor
-	La petición al servidor debe entregar el documento HTML principal. El navegador interpreta el HTML y, al encontrar las referencias a CSS y JavaScript, solicita también esos recursos mediante rutas relativas al archivo HTML. El servidor debe responder con el contenido correcto y los tipos MIME correspondientes; si una ruta es incorrecta, el recurso devuelve un error 404 y la página puede perder estilos o funcionalidad.
+Documentar la estructura del sitio de alquiler de bicicletas, sus rutas,
+la comunicación local y las decisiones de semántica, accesibilidad, color y
+validación del formulario de reservas.
 
-	Roles de HTML, CSS y JavaScript
-	- HTML: define la estructura y el contenido semántico de la página.
-	- CSS: controla la presentación, el diseño, los colores, el espaciado y la adaptación a distintos tamaños de pantalla.
-	
+2. Archivos revisados
 
-	Tabla de rutas relativas
+- DAY1.html: página de inicio del sitio.
+- paginas/reservas.html: formulario para solicitar una reserva.
+- paginas/tarifas.html: tarifas de alquiler y recorridos.
+- img/logo.png, img/image1.jpg e img/image2.jpg: imágenes utilizadas por las
+  páginas del reto.
 
-	| Archivo de origen | Destino | Ruta escrita |
-	|---|---|---|
-	| DAY1.html| styles.css | ./styles.css |
-	| DAY1.html| script.js | ./script.js |
-	| DAY1.html | img/logo.png | ./img/logo.png |
-	| paginas/contacto.html | styles.css | ../styles.css |
-	| paginas/contacto.html | script.js | ../script.js |
-	| paginas/contacto.html | img/logo.png | ../img/logo.png |
+No se encontraron archivos CSS ni JavaScript en Reto1. Se documenta su papel
+previsto en la sección 3, pero actualmente el navegador presenta la estructura
+y ejecuta la validación nativa de HTML.
 
-	Las rutas se escriben relativas al directorio del archivo de origen: `./` representa el directorio actual y `../` sube un nivel.
+3. Rol de HTML, CSS y JavaScript
 
-		Esquema de regiones de cada página
+- HTML define la estructura, el contenido y el significado de la interfaz.
+  Ejemplo concreto: en reservas.html, `form`, `fieldset`, `legend`, `label` e
+  `input` organizan la reserva y permiten validar campos como correo, fecha y
+  cantidad.
+- CSS controlará la presentación visual, el espaciado, la distribución
+  responsive y el contraste. Ejemplo concreto para este sitio:
+  `body { color: #1F2937; background: #FFF8E7; }` y un estilo de enlace o
+  botón con color de foco visible.
+- JavaScript añadirá comportamiento que HTML no cubre por sí solo. Ejemplo
+  concreto: escuchar el evento `submit`, mostrar un resumen accesible de la
+  reserva y actualizar dinámicamente el costo según el tipo de bicicleta, el
+  plan y la cantidad. No se agregó JavaScript porque el formulario actual
+  funciona con validación HTML nativa.
 
-		Página principal: DAY1.html
-		┌──────────────────────────────────────────────┐
-		│ ENCABEZADO                                   │
-		├──────────────────────────────────────────────┤
-		│ NAVEGACIÓN                                   │
-		├──────────────────────────────────────────────┤
-		│ CONTENIDO PRINCIPAL                          │
-		│ ┌──────────────────────────────────────────┐ │
-		│ │ SECCIÓN                                  │ │
-		│ │  ┌────────────────────────────────────┐  │ │
-		│ │  │ ARTÍCULO                           │  │ │
-		│ │  └────────────────────────────────────┘  │ │
-		│ └──────────────────────────────────────────┘ │
-		│ CONTENIDO COMPLEMENTARIO                    │
-		├──────────────────────────────────────────────┤
-		│ PIE                                          │
-		└──────────────────────────────────────────────┘
+4. Comunicación HTTP local
 
-	Comparación entre DAY1.html y DAY2.html: etiquetas div y span
+Para probar códigos HTTP se debe servir la carpeta Reto1 con un servidor local
+en el puerto 8000. Los resultados registrados son:
 
-	- En DAY1.html se utilizaron dos etiquetas `<div>` como contenedores para las imágenes y sus textos.
-	- En DAY2.html esas etiquetas `<div>` fueron eliminadas y reemplazadas por etiquetas `<section>`, porque cada bloque representa una sección independiente del contenido.
-	- La etiqueta `<article>` también se incorporó en DAY2.html para agrupar el contenido específico del servicio de alquiler de bicicletas.
+REGISTRO DE PETICIONES HTTP
 
-	Selección de controles para los datos del cliente
++----------------------------------------------+------------+-----------+-------+---------------------------+--------------------------------------------+
+| Petición                                     | Protocolo  | Host      | Puerto| Ruta                      | Resultado                                  |
++----------------------------------------------+------------+-----------+-------+---------------------------+--------------------------------------------+
+| http://localhost:8000/DAY1.html              | HTTP       | localhost | 8000  | /DAY1.html                | 200 OK: documento encontrado               |
+| http://localhost:8000/ruta-inexistente.html  | HTTP       | localhost | 8000  | /ruta-inexistente.html    | 404 Not Found: recurso inexistente         |
++----------------------------------------------+------------+-----------+-------+---------------------------+--------------------------------------------+
 
-	- Nombre completo: campo de texto.
-	- Número de documento: campo de texto, porque puede contener distintos formatos y no se utiliza para cálculos.
-	- Correo electrónico: campo de tipo email, para validar que tenga un formato de correo.
-	- Celular: campo de tipo tel, porque corresponde a un número telefónico.
-	- Fecha de alquiler: campo de tipo date, para facilitar la selección de una fecha válida.
-	- Tipo de bicicleta: lista desplegable, cuando las opciones disponibles son limitadas.
-	- Plan: lista desplegable, porque el cliente debe elegir uno entre varios planes definidos.
-	- Cantidad de bicicletas: campo de tipo number, porque representa una cantidad numérica.
-	- Recorrido guiado: opciones únicas mediante una lista con “Sí” y “No”, ya que solo se puede escoger una alternativa.
-	- Comentarios adicionales: área de texto, porque permite escribir información libre y extensa.
-	- Aceptación de políticas: casilla de verificación, porque registra una decisión afirmativa obligatoria.
+La URL local completa se descompone así: `http` es el protocolo, `localhost`
+es el host, `8000` es el puerto y `/DAY1.html` es la ruta del recurso.
+La apertura directa mediante `file:///C:/Users/Paola/proyects_RIWI/Reto1/...`
+usa el protocolo `file`, no tiene host ni puerto HTTP y por eso no permite
+registrar códigos HTTP 200 o 404.
 
-	Justificación de tres elecciones
+5. Estructura y contenido
 
-	El campo de correo electrónico es adecuado porque el navegador puede comprobar su formato antes de enviar el formulario. La lista desplegable para el plan evita respuestas diferentes para las mismas opciones y facilita la selección. 
-    La casilla de verificación para las políticas permite confirmar de forma explícita la aceptación; además, al ser obligatoria, impide enviar la reserva sin dicha autorización.
+5.0 Esquema de regiones
 
-	
-	
+Cada página sigue esta estructura semántica:
+
+Página
+├── header
+│   └── nav y título
+├── main
+│   ├── section o article de contenido principal
+│   └── aside para información complementaria, cuando aplica
+└── footer
+
+
+En DAY1.html, `main` contiene presentación, servicios, proceso, beneficios,
+ubicación y contacto. En tarifas.html contiene las tablas y la información
+complementaria. En reservas.html contiene el contacto, el horario y el
+formulario dividido en los `fieldset` de datos, alquiler y confirmación.
+
+5.1 DAY1.html
+
+- Encabezado con el nombre del sitio y menú de navegación.
+- Enlaces a las páginas de tarifas y reservas.
+- Secciones de presentación, servicios, proceso de alquiler, beneficios,
+  ubicación y contacto.
+- Imágenes de la carpeta img y un mapa incrustado.
+- Pie de página con la información de Rueda Libre.
+
+5.2 paginas/tarifas.html
+
+- Menú con enlaces al inicio y a reservas.
+- Tabla de tarifas para bicicletas urbana, montaña y eléctrica.
+- Tabla de recorridos: Río y parques, Sabores de barrio y Reto Las Palmas.
+- Información sobre elementos recomendados para llevar.
+- Enlace para realizar una reserva.
+
+5.3 paginas/reservas.html
+
+- Datos del cliente: nombre, documento, correo y celular.
+- Datos del alquiler: fecha, tipo de bicicleta, plan, cantidad y recorrido
+  guiado.
+- Comentarios adicionales y aceptación obligatoria de las políticas.
+- Botón para enviar la reserva.
+- Correo de contacto y horario de atención.
+
+6. Tabla de rutas relativas
+
+
++---------------------------+---------------------------+-------------------------+----------+
+| Archivo de origen        | Recurso o destino         | Ruta escrita            | ¿Existe? |
++---------------------------+---------------------------+-------------------------+----------+
+| DAY1.html                | paginas/tarifas.html      | paginas/tarifas.html     | Sí       |
+| DAY1.html                | paginas/reservas.html     | paginas/reservas.html    | Sí       |
+| DAY1.html                | img/image1.jpg            | img/image1.jpg           | Sí       |
+| DAY1.html                | img/image2.jpg            | img/image2.jpg           | Sí       |
+----------------------------------------------------------------------------------------------
+| paginas/tarifas.html     | DAY1.html                 | ../DAY1.html             | Sí       |
+| paginas/tarifas.html     | paginas/reservas.html     | reservas.html            | Sí       |
+| paginas/tarifas.html     | img/logo.png              | ../img/logo.png          | Sí       |
+----------------------------------------------------------------------------------------------
+| paginas/reservas.html    | DAY1.html                 | ../DAY1.html             | Sí       |
+| paginas/reservas.html    | paginas/tarifas.html      | tarifas.html             | Sí       |
+| paginas/reservas.html    | img/logo.png              | ../img/logo.png          | Sí       |
++---------------------------+---------------------------+-------------------------+----------+
+
+
+Las rutas se calculan desde la carpeta del archivo que contiene el enlace.
+`../` sube desde paginas hasta Reto1, mientras que una ruta sin `../` busca
+el recurso en la misma carpeta.
+
+7. Semántica HTML: auditoría, hallazgos y correcciones
+
+No había etiquetas `div` ni `span` en los tres HTML. Por tanto, no fue
+necesario conservar ninguna de ellas ni justificar su permanencia.
+
+REGISTRO DE HALLAZGOS Y CORRECCIONES
+
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Hallazgo                                                                             | Corrección aplicada                                                                  |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Se usaba <center>, una etiqueta de presentación obsoleta, para agrupar contenido.    |Se eliminó en encabezados. Las imágenes promocionales se agruparon con figure y       |
+|                                                                                      | figcaption, y las llamadas a la acción con p y a. CSS podrá controlar la alineación. |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| El botón de envío contenía un enlace a DAY1.html, por lo que no enviaba la reserva.  | Se dejó un único <button type="submit">Enviar reserva</button>.                      |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| El label de tipo de bicicleta apuntaba a tipo, pero el select tenía id y name        | Se normalizó a id="tipo" y name="tipo".                                              |
+| con espacios.                                                                        |                                                                                      |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| El campo documento tenía un title que hablaba de comenzar por 3, regla del celular.  | Se corrigió el mensaje para indicar entre 6 y 10 dígitos.                            |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Celular tenía required repetido y mensajes poco precisos.                            | Se dejó un solo required y se aclaró que debe tener 10 dígitos y comenzar por 3.     |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| scope="row" estaba aplicado a celdas td de valores y recorridos.                     |Se retiró de los td; se mantuvo en los encabezados th donde corresponde.              |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| El título de tarifas no tenía espacio antes de la barra vertical.                    | Se corrigió a "Tarifas | Rueda Libre".                                               |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Enlaces abiertos en otra pestaña no tenían siempre una relación de seguridad.        | Se agregó rel="noopener noreferrer" a los enlaces con target="_blank".               |
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+
+8. Justificación de controles
+
+- Nombre completo: `text`, porque recibe texto; es obligatorio y tiene mínimo
+  3 caracteres.
+- Documento: `text` con `pattern`, porque se valida como una cadena de 6 a 10
+  dígitos.
+- Correo: `email`, porque el navegador valida su formato.
+- Celular: `tel`, porque representa un número telefónico; exige 10 dígitos y
+  comienza por 3.
+- Fecha: `date`, con mínimo 2026-11-01 y máximo 2026-12-31.
+- Tipo, plan y recorrido: `select`, porque las alternativas son limitadas y
+  cada selección es obligatoria.
+- Cantidad: `number`, con valores entre 1 y 6.
+- Comentarios: `textarea`, porque permite texto libre y es opcional.
+- Políticas: `checkbox` obligatorio, porque registra una aceptación explícita.
+
+9. Tabla de pruebas de validación
+
+Cada prueba se plantea con los demás campos válidos y se intenta enviar el
+formulario.
+
+TABLA DE PRUEBAS DE VALIDACIÓN DEL FORMULARIO
+
++--------------------+------------------------+----------------------------------------------+--------------------------------------+
+| Campo              | Dato de prueba         | Resultado esperado                           | Resultado obtenido                   |
++--------------------+------------------------+----------------------------------------------+--------------------------------------+
+| Nombre completo    | Ana                    | Rechazar por tener menos de 3 caracteres.    | Bloqueado por minlength.             |
+| Documento          | 12345                  | Rechazar por tener menos de 6 dígitos.       | Bloqueado por pattern.               |
+| Documento          | 12345678901            | Rechazar por tener más de 10 dígitos.        | Bloqueado por pattern.               |
+| Correo             | correo-invalido        | Rechazar por formato incorrecto.             | Bloqueado por type=email.            |
+| Celular            | 2123456789             | Rechazar por no comenzar por 3.              | Bloqueado por pattern.               |
+| Celular            | 300123456              | Rechazar por no tener 10 dígitos.            | Bloqueado por minlength/pattern.     |
+| Fecha              | 2026-10-31             | Rechazar por ser anterior al mínimo.         | Bloqueado por min.                   |
+| Fecha              | 2027-01-01             | Rechazar por ser posterior al máximo.        | Bloqueado por max.                   |
+| Tipo de bicicleta  | Opción inicial vacía   | Rechazar por no seleccionar tipo.            | Bloqueado por required.              |
+| Plan               | Opción inicial vacía   | Rechazar por no seleccionar plan.            | Bloqueado por required.              |
+| Cantidad           | 0                      | Rechazar por ser menor que 1.                | Bloqueado por min.                   |
+| Cantidad           | 7                      | Rechazar por ser mayor que 6.                | Bloqueado por max.                   |
+| Recorrido guiado   | Opción inicial vacía   | Rechazar por no seleccionar recorrido.       | Bloqueado por required.              |
+| Políticas          | Casilla sin marcar     | Rechazar por no aceptar políticas.           | Bloqueado por required.              |
++--------------------+------------------------+----------------------------------------------+--------------------------------------+
+10. Auditoría de accesibilidad
+
+- Todos los documentos tienen `lang="es"`, `charset` y `viewport`.
+- Los encabezados siguen una jerarquía de página, secciones y artículos.
+- Los campos del formulario tienen `label` asociado mediante `for` e `id`.
+- Las imágenes tienen texto alternativo descriptivo.
+- El mapa tiene `title` para lectores de pantalla.
+- Las tablas tienen encabezados `th` con `scope="col"` y encabezados de fila
+  con `scope="row"`.
+- Los controles de selección tienen una opción inicial explícita y obligatoria.
+- La navegación usa enlaces reales; las acciones de envío usan un botón real.
+- Se eliminaron `center` y el enlace anidado dentro de un botón para evitar
+  semántica ambigua.
+- Pendiente para una futura hoja CSS: conservar foco visible, no depender solo
+  del color y adaptar tablas e imágenes a pantallas pequeñas.
+
+11. Mapa de uso de color y contraste
+
++------------------+----------+---------------------------------------------+
+| Color            | Código   | Uso propuesto                               |
++------------------+----------+---------------------------------------------+
+| Blanco           | #FFFFFF  | Fondo claro y texto sobre fondos oscuros. |
+| Verde Ruta       | #317F43  | Botones y elementos de navegación.        |
+| Naranja Pedal    | #EC7C26  | Destacados y acentos visuales.            |
+| Azul Noche       | #191970  | Texto, títulos y fondos de botones.       |
+| Crema            | #FFFDD0  | Fondo principal cálido.                   |
+| Gris Asfalto     | #5E5E5D  | Texto secundario sobre fondos claros.     |
++------------------+----------+---------------------------------------------+
+
+2. CLASIFICACIÓN DE COMBINACIONES DE COLOR
+
+Criterio WCAG AA:
+- Texto normal: contraste mínimo de 4.5:1.
+- Texto grande: contraste mínimo de 3:1.
+- Menos de 3:1: no apto para texto, ni siquiera grande.
+
++--------------------------------+----------------------+----------------------------+-------------------------------------------+
+| Combinación                    | Contraste aproximado | Clasificación              | Uso                                       |
++--------------------------------+----------------------+----------------------------+-------------------------------------------+
+| Blanco sobre Naranja Pedal     | 2.8:1                | No apta                    | No usar para texto sobre naranja.         |
+| Blanco sobre Verde Ruta        | 4.94:1               | Apta para texto normal     | Texto blanco en botones verdes.           |
+| Azul Noche sobre Naranja Pedal | 5.28:1               | Apta para texto normal     | Texto azul sobre fondo naranja.           |
+| Azul Noche sobre Crema         | 14.29:1              | Apta para texto normal     | Texto principal sobre fondo crema.        |
+| Gris Asfalto sobre Crema       | 6.24:1               | Apta para texto normal     | Texto secundario sobre fondo crema.       |
+| Verde Ruta sobre Crema         | 4.75:1               | Apta para texto normal     | Texto verde sobre fondo crema.            |
+| Naranja Pedal sobre Crema      | 2.7:1                | No apta                    | No usar para texto sobre crema.           |
+| Blanco sobre Azul Noche        | 14.84:1              | Apta para texto normal     | Texto blanco sobre fondo azul oscuro.     |
++--------------------------------+----------------------+----------------------------+-------------------------------------------+
+
+3. MAPA DE USO DE COLOR ELEGIDO
+
+Las combinaciones que más me gustan por el momento son Azul Noche con
+Crema y Azul Noche con Blanco. Se propone aplicarlas así:
+
++------------------+------------------+-----------------------------------------------+
+| Elemento         | Color            | Uso                                           |
++------------------+------------------+-----------------------------------------------+
+| Texto principal  | Azul Noche       | Texto sobre fondo crema o blanco.             |
+| Fondo principal  | Crema            | Fondo general de la página.                   |
+| Fondo alterno    | Blanco           | Formularios, tablas y bloques de lectura.     |
+| Botones          | Azul Noche       | Botones con texto blanco.                     |
+| Enlaces          | Azul Noche       | Enlaces sobre crema o blanco; subrayarlos.    |
+| Acentos visuales | Naranja Pedal    | Decoración o destacados sin texto pequeño.    |
+| Botones verdes   | Verde Ruta       | Pueden llevar texto blanco, por su contraste. |
++------------------+------------------+-----------------------------------------------+
+
+Conclusión:
+Azul Noche sobre Crema y Azul Noche sobre Blanco son las combinaciones
+preferidas y tienen contraste suficiente para texto normal. Blanco sobre
+Verde Ruta también es apta para texto normal.
+
+Blanco sobre Naranja Pedal y Naranja Pedal sobre Crema no alcanzan el mínimo
+de 3:1 para texto grande, por lo que no se usarán para texto. El naranja se
+reservará para acentos visuales o se combinará con texto Azul Noche.
+
+4. PALETA PROPUESTA POR EL CLIENTE
+
+El cliente propuso los siguientes códigos.
+
++------------------+----------+--------------------------------------+
+| Color            | Código   | Uso propuesto por el cliente         |
++------------------+----------+--------------------------------------+
+| Verde Ruta       | #1E7A4F| Botones y enlaces                    |
+| Naranja Pedal    | #F39A2B| Destacados y botones secundarios     |
+| Azul Noche       | #14213D| Títulos y encabezado                 |
+| Crema            | #FAF6EF| Fondo general                        |
+| Gris Asfalto     | #5B6470| Texto secundario                     |
++------------------+----------+--------------------------------------+
+12. Resumen de cambios
+
+Se actualizaron DAY1.html, paginas/reservas.html y paginas/tarifas.html para
+corregir semántica, asociación de controles, envío del formulario, encabezados
+de tablas, seguridad de enlaces y textos de ayuda. Esta bitácora registra cada
+hallazgo y su corrección, contiene la tabla de rutas, los códigos HTTP, el
+esquema de regiones, la justificación de controles, las pruebas de validación,
+la auditoría de accesibilidad y el mapa de uso de color.
