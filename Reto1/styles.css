@@ -1,0 +1,302 @@
+:root {
+    /* Colores */
+    --color-blanco: #ffffff;
+    --color-verde-ruta:#317F43;
+    --color-azul-oscuro:#191970;
+    --color-crema: #FFFDD0;
+    --color-naranja-pedal: #EC7C26;
+    --color-verde-claro: #90EE90;
+    /* Fuentes */
+    --fuente-titulos: 'Montserrat', Arial, sans-serif;
+    --fuente-textos: 'Open Sans', Arial, sans-serif;
+    
+    /* Espacios */
+     --espacio-pequeno: 0.5rem;
+    --espacio-mediano: 1rem;
+    --espacio-grande: 2rem;
+}
+
+body {
+    font-family: var(--fuente-textos);
+    margin: auto;
+    padding: 0;
+    background-color: var(--color-crema);
+    color: var(--color-azul-oscuro);
+}
+
+
+   h1 {
+    font-family: var(--fuente-titulos);
+    text-align: center;
+    margin-bottom: var(--espacio-mediano);
+    margin-top: -20px;
+   
+}
+
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+}
+
+p {
+    margin-bottom: var(--espacio-mediano);
+    margin: 0 auto var(--espacio-mediano);
+    
+}
+
+p a {
+    color: var(--color-verde-ruta);
+    text-decoration: none;
+}
+header {
+    background-color: var(--color-verde-ruta);
+    color: var(--color-blanco);
+    padding: var(--espacio-mediano);
+    text-align: center;
+}   
+
+
+
+footer {
+    background-color: var(--color-verde-ruta);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espacio-mediano);
+}
+
+iframe{
+    border: 10px solid var(--color-verde-ruta);
+    width: 50%;
+    height: 400px;
+     margin: var(--espacio-grande) auto;
+    display: block;
+    align-items: center;
+   ;
+    
+}
+
+section{
+    margin: var(--espacio-grande) auto;
+    padding: var(--espacio-mediano);
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    width: 80%;
+    align-items: center;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: var(--espacio-pequeno) auto;
+
+
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+aside {
+    background-color: var(--color-blanco);
+    padding: var(--espacio-mediano);
+    border-radius: 5px;
+    margin: var(--espacio-grande) auto;
+    width: 80%;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    margin: var(--espacio-mediano) auto;
+    padding: var(--espacio-mediano);
+
+}
+
+nav summary {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(color--verde-ruta);
+    color: var(--color-blanco);
+    border-radius: 5px;
+    text-align: left;
+    list-style: none;
+    
+}
+
+main {
+    margin: var(--espacio-grande) auto;
+    padding: var(--espacio-mediano);
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--espacio-grande) auto;
+    border: 3px solid var(--color-verde-ruta);
+    border-radius: 10px;
+    text-align: center;
+}
+th, td {
+    padding: var(--espacio-pequeno);
+    border: 1px solid var(--color-verde-ruta);
+}
+
+form {
+    margin: var(--espacio-grande) auto;
+    padding: var(--espacio-mediano);
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+form label {
+    display: block;
+    margin-bottom: var(--espacio-pequeno);
+    border-radius: 10px;
+    
+}
+
+fieldset {
+    border: 1px solid var(--color-verde-ruta);
+    padding: var(--espacio-mediano);
+    margin-bottom: var(--espacio-mediano);
+    border-radius: 10px;
+}
+#menu {
+    background-color: var(--color-verde-ruta);
+    padding: var(--espacio-mediano);
+    margin: 0;
+    width: 180px;
+    box-sizing: border-box;
+    justify-content: flex-start
+}
+
+#menu a {
+     display: block;
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin: 0 var(--espacio-pequeno);
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+   
+}
+
+
+
+#menu a:hover {
+    background-color: var(--color-verde-claro);
+    color: var(--color-azul-oscuro);
+}
+
+#menu a:focus {
+     background-color: var(--color-naranja-pedal);
+    color: var(--color-blanco);
+    outline: 3px solid var(--color-azul-oscuro);
+    outline-offset: 2px;
+}
+
+#menu a.active {
+    background-color: var(--color-verde-claro);
+    color: var(--color-azul-oscuro);
+}
+
+
+#menu li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#reserva-button {
+    display: block;
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-blanco);
+    padding: var(--espacio-mediano) var(--espacio-mediano);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: var(--espacio-mediano) auto;
+      text-align: center;
+}
+
+  
+
+#reserva-button:hover {
+     background-color: var(--color-verde-claro);
+    color: var(--color-azul-oscuro);
+}
+
+#reserva-button:focus {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-blanco);
+    outline: 3px solid var(--color-azul-oscuro);
+    outline-offset: 3px;
+}
+#enviar-reserva {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-blanco);
+    padding: var(--espacio-pequeno) var(--espacio-grande);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+   margin: var(--espacio-mediano) auto;
+}
+
+#enviar-reserva:hover {
+    background-color: var(--color-verde-claro);
+}
+
+#reserva-retorno {
+    background-color: var(--color-naranja-pedal);
+    color: var(--color-blanco);
+    padding: var(--espacio-pequeno) var(--espacio-mediano);
+    border-radius: 5px;
+    text-decoration: none;
+    margin: var(--espacio-mediano) auto;
+    display: block;
+     width: fit-content;
+}
+
+#reserva-retorno:hover {
+    background-color: var(--color-verde-claro);
+}
+
+#imagen-montana {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.bienvenida {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: var(--espacio-grande);
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+    display: block;
+    margin: var(--espacio-mediano) auto;
+
+} 
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-naranja-pedal);
+    outline-offset: 2px;
+    border-color: var(--color-azul-oscuro);
+}

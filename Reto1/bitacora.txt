@@ -291,3 +291,52 @@ de tablas, seguridad de enlaces y textos de ayuda. Esta bitácora registra cada
 hallazgo y su corrección, contiene la tabla de rutas, los códigos HTTP, el
 esquema de regiones, la justificación de controles, las pruebas de validación,
 la auditoría de accesibilidad y el mapa de uso de color.
+
+COMPROBACIÓN DE HERENCIA CSS EN DEVTOOLS
+
+TABLA DE COMPROBACIÓN
++----------------------+----------------------+--------------------------+------------------------------------------+
+| Tipo de propiedad    | Propiedad CSS        | Valor observado          | Comprobación                             |
++----------------------+----------------------+--------------------------+------------------------------------------+
+| Se hereda            | color                | rgb(25, 25, 112)       | El elemento hijo puede heredar el color|
+|                      |                      |                          | de su elemento padre.                    |
++----------------------+----------------------+--------------------------+------------------------------------------+
+| No se hereda         | display              | block / list-item        | Cada elemento tiene su propio valor de   |
+|                      |                      |                          | visualización.                           |
++----------------------+----------------------+--------------------------+------------------------------------------+
+
+PROCEDIMIENTO REALIZADO:
+
+Se inspeccionaron los elementos de la página mediante las herramientas de desarrollador del navegador (DevTools). Se revisaron las propiedades CSS y los valores mostrados para cada elemento.
+
+RESULTADO:
+
+Se identificó color como una propiedad que se hereda y display como una propiedad que no se hereda. Los valores registrados corresponden a los observados durante la inspección.
+
+Nota: Para confirmar directamente la herencia de color, se debe verificar en la pestaña Styles que el valor del elemento hijo provenga del elemento padre.
+
+
+
+Análisis de especificidad:
+
+a: especificidad (0, 0, 1).
+
+.active: especificidad (0, 1, 0).
+
+#menu: especificidad (1, 0, 0).
+
+#menu a: especificidad (1, 0, 1).
+
+#menu a.active: especificidad (1, 1, 1).
+
+Resultado de la inspección:
+
+En DevTools observé que la regla #menu a.active aparece sin tachaduras y establece el fondo verde claro mediante var(--color-verde-claro) y el color del texto mediante var(--color-azul-oscuro). También comprobé que existe otra regla general, #menu a, que define las propiedades de los enlaces del menú.
+
+Causa identificada:
+
+En la inspección realizada no se encontró evidencia de que la clase active estuviera fallando, ya que el navegador reconoce la regla CSS correspondiente y muestra sus propiedades como activas. Por lo tanto, no fue necesario modificar esta clase.
+
+Conclusión:
+
+Aprendí a utilizar DevTools para inspeccionar elementos HTML, verificar las clases CSS y comparar la especificidad de los selectores. También comprendí que una regla con mayor especificidad puede prevalecer sobre otra cuando ambas establecen la misma propiedad y no intervienen otros factores de la cascada CSS.
