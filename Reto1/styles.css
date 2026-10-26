@@ -4,10 +4,11 @@
 ========================================= */
 
 :root {
+    
     /* Colores */
     --color-blanco: #ffffff;
-    --color-verde-ruta: #317F43;
-    --color-azul-oscuro: #191970;
+    --color-verde-ruta:#317F43;
+    --color-azul-oscuro:#191970;
     --color-crema: #FFFDD0;
     --color-naranja-pedal: #EC7C26;
     --color-verde-claro: #90EE90;
