@@ -353,3 +353,39 @@ Aprendí a utilizar DevTools para inspeccionar elementos HTML, verificar las cla
 | Observación           | El ancho no cambió; se debe verificar que la propiedad |
 |                       | se esté aplicando a la tarjeta y no al contenedor.     |
 +-----------------------+---------------------+----------------------------------+
+
+CIERRE DE BITÁCORA SEMANAL
+
+Durante esta semana trabajé en el desarrollo del proyecto Rueda Libre Medellín, aplicando los conocimientos de HTML y CSS aprendidos en los diferentes MiniRetos.
+
+¿QUÉ CONSTRUÍ EN LOS MINIRETOS?
+
+En los primeros MiniRetos trabajé en la estructura de las páginas HTML, organizando los encabezados, títulos, párrafos, imágenes, enlaces y diferentes secciones del contenido.
+
+Después, trabajé en los estilos CSS para mejorar la presentación visual de las páginas. Aprendí a utilizar variables para definir colores, fuentes y espacios, y a organizar los elementos para mantener una apariencia coherente.
+
+También construí un menú de navegación para acceder a las páginas de inicio, reservas y tarifas. Practiqué el uso de selectores CSS, clases, identificadores y pseudoclases como :hover y :focus.
+
+En los ejercicios de formularios trabajé con campos de entrada, etiquetas, botones y atributos de validación HTML. También realicé pruebas con datos incorrectos para comprobar el comportamiento de las validaciones.
+
+Además, mejoré la presentación de las imágenes y las tarjetas de servicios, agregué una etiqueta para destacar contenido nuevo y configuré un enlace fijo de WhatsApp que permanece visible al desplazarse por la página.
+
+Finalmente, trabajé en la accesibilidad mediante indicadores de foco visibles, textos alternativos para las imágenes y estados visuales para los enlaces y botones. También aprendí a organizar el archivo CSS por secciones y a identificar reglas duplicadas o errores de sintaxis.
+
+¿QUÉ APRENDÍ?
+
+Aprendí que HTML permite estructurar el contenido de una página, mientras que CSS permite definir su apariencia. Comprendí que los selectores sirven para aplicar estilos a elementos específicos y que las variables CSS facilitan el mantenimiento de los colores, las fuentes y los espacios.
+
+También aprendí a identificar errores en las rutas de los archivos, a relacionar las páginas HTML con una hoja de estilos compartida y a interpretar errores 404, como el que apareció al buscar el archivo favicon.ico.
+
+Durante los ejercicios comprendí que algunos errores se producen por pequeños detalles de sintaxis, nombres de clases incorrectos o rutas mal configuradas. Por eso, es importante revisar el código y probar los cambios en el navegador.
+
+¿QUÉ MEJORARÍA?
+
+Me gustaría mejorar la organización de mi código para evitar errores y facilitar su mantenimiento. También quiero practicar más los selectores CSS, las pseudoclases, la validación de formularios y el diseño adaptable a diferentes tamaños de pantalla.
+
+Además, quiero fortalecer mi capacidad para identificar y solucionar errores de manera independiente, comprendiendo por qué ocurren en lugar de limitarme a copiar una solución.
+
+CONCLUSIÓN
+
+Esta semana avancé en la construcción de Rueda Libre Medellín y comprendí mejor cómo se complementan HTML y CSS para crear páginas web funcionales y visualmente organizadas. Aunque todavía necesito practicar algunos conceptos, cada MiniReto me permitió adquirir nuevos conocimientos y desarrollar más confianza al trabajar con código.
