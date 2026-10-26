@@ -340,3 +340,16 @@ En la inspección realizada no se encontró evidencia de que la clase active est
 Conclusión:
 
 Aprendí a utilizar DevTools para inspeccionar elementos HTML, verificar las clases CSS y comparar la especificidad de los selectores. También comprendí que una regla con mayor especificidad puede prevalecer sobre otra cuando ambas establecen la misma propiedad y no intervienen otros factores de la cascada CSS.
+
+
++-----------------------+---------------------+----------------------------------+
+| Elemento o propiedad  | Antes del cambio    | Después del cambio               |
++-----------------------+---------------------+----------------------------------+
+| Elemento inspeccionado| section.servicios   | section.servicios                |
+| Ancho del contenedor  | 800px               | 800px                            |
+| Ancho medido          | 768px               | 768px                            |
+| box-sizing            | content-box         | border-box                       |
++-----------------------+---------------------+----------------------------------+
+| Observación           | El ancho no cambió; se debe verificar que la propiedad |
+|                       | se esté aplicando a la tarjeta y no al contenedor.     |
++-----------------------+---------------------+----------------------------------+
