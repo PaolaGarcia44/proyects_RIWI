@@ -405,3 +405,23 @@ Ancho de pantalla | Columnas observadas
 Conclusión:
 Se comprobó cómo se reorganizan las tarjetas de bicicletas
 en diferentes anchos de pantalla.
+
+REGISTRO DE USO DE FLEXBOX Y GRID
+
+1. Portada
+Usé Grid para organizar el texto y la imagen en dos columnas y centrar el contenido verticalmente.
+
+2. Galería de rutas
+Usé Grid para distribuir las tres tarjetas en columnas iguales y mantener una separación uniforme.
+
+3. Reservas
+Usé Grid para distribuir el formulario y la información de contacto en proporción 2:1, dando más espacio al formulario.
+
+4. Fila del formulario
+Usé Grid para colocar los campos de documento y celular en la misma fila, con el mismo ancho y una separación uniforme.
+
+5. Encabezado
+Usé Flexbox para organizar el logo, el título y el menú, permitiendo distribuirlos y alinearlos dentro de la misma fila.
+
+6. Pie de página
+Usé Flexbox para distribuir los bloques de información y alinearlos, manteniendo una separación entre ellos.

@@ -1,17 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
-    <meta name="description" content="Rueda Libre es una empresa de alquiler de bicicletas en Medellín, ofreciendo una amplia variedad de bicicletas para todos los gustos y necesidades.">
+    <meta name="description"
+        content="Rueda Libre es una empresa de alquiler de bicicletas en Medellín, ofreciendo una amplia variedad de bicicletas para todos los gustos y necesidades.">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 
@@ -20,49 +23,81 @@
 
     <header class="portada">
 
-    <div class="barra-superior">
-        <div class="marca">
-            <img src="img/logo.png"
-                 alt="Logo de Rueda Libre"
-                 width="200"
-                 height="200"
-                 class="logo">
-            <h1>Alquiler de bicicletas en Medellín</h1>
+        <div class="barra-superior">
+            <div class="marca">
+                <img src="img/logo.png" alt="Logo de Rueda Libre" width="200" height="200" class="logo">
+                <h1>Alquiler de bicicletas en Medellín</h1>
+            </div>
+
+            <nav>
+                <details>
+                    <summary>
+                        <img src="img/menu.png" alt="Icono de menú" width="30" height="30">
+                    </summary>
+                    <ul id="menu">
+                        <li><a href="DAY1.html" class="active">Inicio</a></li>
+                        <li><a href="paginas/reservas.html">Reservas</a></li>
+                        <li><a href="paginas/tarifas.html">Tarifas</a></li>
+                    </ul>
+                </details>
+            </nav>
         </div>
 
-        <nav>
-            <details>
-                <summary>
-                    <img src="img/menu.png" alt="Icono de menú" width="30" height="30">
-                </summary>
-                <ul id="menu">
-                    <li><a href="DAY1.html" class="active">Inicio</a></li>
-                    <li><a href="paginas/reservas.html">Reservas</a></li>
-                    <li><a href="paginas/tarifas.html">Tarifas</a></li>
-                </ul>
-            </details>
-        </nav>
-    </div>
 
-    
 
-</header>
+    </header>
 
     <main>
 
-        
 
-        <p class="bienvenida">Bienvenido a Rueda Libre, aquí hay de todo.</p>
+        <section id="portada">
+            <div class="portada-texto">
+                <p class="bienvenida">Muévete por Medellín</p>
 
-        <p>
-        <a href="paginas/reservas.html" target="_blank" rel="noopener noreferrer" id="reserva-button">
-            RESERVAR AHORA
-        </a>
-    </p>
+                <p>
+                    Descubre la ciudad a tu ritmo.
+                    Alquila tu bicicleta y disfruta el recorrido.
+                </p>
+
+                <p>
+                    <a href="paginas/reservas.html" target="_blank" rel="noopener noreferrer" id="reserva-button">
+                        RESERVAR AHORA
+                    </a>
+                </p>
+            </div>
+
+            <div class="portada-imagen">
+                <img src="/Reto1\img\bici.jpg" alt="Bicicleta para recorrer Medellín">
+            </div>
+        </section>
+
+
+        <section id="rutas">
+            <h2>Nuestras rutas</h2>
+
+            <article class="ruta">
+                <img src="/Reto1\img\ruta-calles.jpg" alt="Ruta en bicicleta por el centro de Medellín">
+                <h3>Ruta Centro</h3>
+                <p>Descubre las calles y lugares del centro.</p>
+            </article>
+
+            <article class="ruta">
+                <img src="/Reto1\img\ruta-verde.jpg" alt="Ruta en bicicleta por zonas verdes">
+                <h3>Ruta Verde</h3>
+                <p>Disfruta un recorrido rodeado de naturaleza.</p>
+            </article>
+
+            <article class="ruta">
+                <img src="/Reto1\img\ruta-ciclorruta.jpg" alt="Recorrido por una ciclorruta">
+                <h3>Ruta Ciclorruta</h3>
+                <p>Explora Medellín sobre dos ruedas.</p>
+            </article>
+        </section>
 
         <section>
             <h2>¿Quiénes somos?</h2>
-            <p>Somos una empresa dedicada al alquiler de bicicletas en Medellín, con más de 10 años de experiencia en el sector.</p>
+            <p>Somos una empresa dedicada al alquiler de bicicletas en Medellín, con más de 10 años de experiencia en el
+                sector.</p>
         </section>
 
         <section>
@@ -77,14 +112,16 @@
         <section>
             <h2>¿Cómo alquilar?</h2>
 
-            <p>Para alquilar una bicicleta, simplemente acércate a cualquiera de nuestros puntos de atención y elige la que mejor se adapte a tus necesidades. <em>Incluye casco y candado.</em></p>
+            <p>Para alquilar una bicicleta, simplemente acércate a cualquiera de nuestros puntos de atención y elige la
+                que mejor se adapte a tus necesidades. <em>Incluye casco y candado.</em></p>
 
             <h3>Pasos para alquilar una bicicleta:</h3>
             <ol>
                 <li>Primer paso: debes acceder a la página web de Rueda Libre.</li>
                 <li>Segundo paso: selecciona la bicicleta que deseas alquilar.</li>
                 <li>Tercer paso: completa el formulario de reserva y confirma tu alquiler.</li>
-                <li>Cuarto paso: acércate a nuestro punto de atención para recoger tu bicicleta y disfrutar de tu paseo.</li>
+                <li>Cuarto paso: acércate a nuestro punto de atención para recoger tu bicicleta y disfrutar de tu paseo.
+                </li>
             </ol>
         </section>
 
@@ -99,104 +136,93 @@
             </ul>
         </section>
 
-<section id="flota">
-    <h2>Nuestra flota</h2>
+        <section id="flota">
+            <h2>Nuestra flota</h2>
 
-    <article class="bicicleta">
-        <img src="img/bicicleta-urbana.jpg"
-             alt="Bicicleta urbana clásica">
-        <h3>Urbana Clásica</h3>
-        <p class="descripcion">Cómoda y liviana para las ciclorrutas.</p>
-        <p class="precio">Precio por hora: $10.000</p>
-        <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
-    </article>
+            <article class="bicicleta">
+                <img src="img/bicicleta-urbana.jpg" alt="Bicicleta urbana clásica">
+                <h3>Urbana Clásica</h3>
+                <p class="descripcion">Cómoda y liviana para las ciclorrutas.</p>
+                <p class="precio">Precio por hora: $10.000</p>
+                <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
+            </article>
 
-    <article class="bicicleta">
-        <img src="img/bicicleta-pegable.jpg"
-             alt="Bicicleta urbana plegable">
-        <h3>Urbana Plegable</h3>
-        <p class="descripcion">Se dobla en segundos; ideal para combinar con el metro.</p>
-        <p class="precio">Precio por hora: $12.000</p>
-        <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
-    </article>
+            <article class="bicicleta">
+                <img src="img/bicicleta-pegable.jpg" alt="Bicicleta urbana plegable">
+                <h3>Urbana Plegable</h3>
+                <p class="descripcion">Se dobla en segundos; ideal para combinar con el metro.</p>
+                <p class="precio">Precio por hora: $12.000</p>
+                <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
+            </article>
 
-    <article class="bicicleta">
-        <img src="img/bicicleta-montana.jpg"
-             alt="Bicicleta de montaña Trail">
-        <h3>Montaña Trail</h3>
-        <p class="descripcion">Suspensión delantera y 21 cambios para las subidas.</p>
-        <p class="precio">Precio por hora: $15.000</p>
-        <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
-    </article>
+            <article class="bicicleta">
+                <img src="img/bicicleta-montana.jpg" alt="Bicicleta de montaña Trail">
+                <h3>Montaña Trail</h3>
+                <p class="descripcion">Suspensión delantera y 21 cambios para las subidas.</p>
+                <p class="precio">Precio por hora: $15.000</p>
+                <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
+            </article>
 
-    <article class="bicicleta">
-        <img src="img/bicicleta-gravel.jpg"
-             alt="Bicicleta Gravel Aventura">
-        <h3>Gravel Aventura</h3>
-        <p class="descripcion">Para rutas mixtas de asfalto y destapado.</p>
-        <p class="precio">Precio por hora: $18.000</p>
-        <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
-    </article>
+            <article class="bicicleta">
+                <img src="img/bicicleta-gravel.jpg" alt="Bicicleta Gravel Aventura">
+                <h3>Gravel Aventura</h3>
+                <p class="descripcion">Para rutas mixtas de asfalto y destapado.</p>
+                <p class="precio">Precio por hora: $18.000</p>
+                <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
+            </article>
 
-   <article class="bicicleta">
-    <span class="nuevo">NUEVO</span>
+            <article class="bicicleta">
+                <span class="nuevo">NUEVO</span>
 
-    <img src="img/bicicleta-electrica.jpg"
-         alt="Bicicleta eléctrica urbana">
+                <img src="img/bicicleta-electrica.jpg" alt="Bicicleta eléctrica urbana">
 
-    <h3>Eléctrica Urbana</h3>
-    <p class="descripcion">Asistencia eléctrica con 45 km de autonomía.</p>
-    <p class="precio">Precio por hora: $25.000</p>
+                <h3>Eléctrica Urbana</h3>
+                <p class="descripcion">Asistencia eléctrica con 45 km de autonomía.</p>
+                <p class="precio">Precio por hora: $25.000</p>
 
-    <a href="paginas/reservas.html" class="reserva-micro">
-        Reservar
-    </a>
-</article>
+                <a href="paginas/reservas.html" class="reserva-micro">
+                    Reservar
+                </a>
+            </article>
 
-    <article class="bicicleta">
-        <img src="img/bicicleta-infantil.jpg"
-             alt="Bicicleta infantil">
-        <h3>Infantil</h3>
-        <p class="descripcion">Para niños de 6 a 10 años.</p>
-        <p class="precio">Precio por hora: $8.000</p>
-        <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
-    </article>
+            <article class="bicicleta">
+                <img src="img/bicicleta-infantil.jpg" alt="Bicicleta infantil">
+                <h3>Infantil</h3>
+                <p class="descripcion">Para niños de 6 a 10 años.</p>
+                <p class="precio">Precio por hora: $8.000</p>
+                <a href="paginas/reservas.html" class="reserva-micro">Reservar</a>
+            </article>
 
 
-    <article class="bicicleta">
-    <img src="img\bicicleta-tadem.jpg"
-         alt="Bicicleta tándem para dos personas">
+            <article class="bicicleta">
+                <img src="img\bicicleta-tadem.jpg" alt="Bicicleta tándem para dos personas">
 
-    <h3>Tándem</h3>
+                <h3>Tándem</h3>
 
-    <p class="descripcion">
-        Para dos personas; perfecta para pasear en pareja.
-    </p>
+                <p class="descripcion">
+                    Para dos personas; perfecta para pasear en pareja.
+                </p>
 
-    <p class="precio">Precio por hora: $20.000</p>
+                <p class="precio">Precio por hora: $20.000</p>
 
-    <a href="paginas/reservas.html" class="reserva-micro">
-        Reservar
-    </a>
-</article>
+                <a href="paginas/reservas.html" class="reserva-micro">
+                    Reservar
+                </a>
+            </article>
 
 
-</section>
+        </section>
 
 
         <section>
             <h2>Encuéntranos</h2>
 
-            <p> <a href="https://portafoliopaolag.web.app/">nuestros puntos de atención</a> en el <em>corazón de Medellín</em>, fácilmente accesibles por todos los medios de transporte.</p>
+            <p> <a href="https://portafoliopaolag.web.app/">nuestros puntos de atención</a> en el <em>corazón de
+                    Medellín</em>, fácilmente accesibles por todos los medios de transporte.</p>
 
-            <iframe
-             title="Mapa de ubicación de Rueda Libre"
+            <iframe title="Mapa de ubicación de Rueda Libre"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.33781794487!2d-75.58618982393274!3d6.219106326623535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44293f0e114eef%3A0x99610cdd44c7c081!2sRiwi!5e0!3m2!1ses-419!2sco!4v1792607443813!5m2!1ses-419!2sco"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen
-                loading="lazy"
+                width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
         </section>
@@ -204,8 +230,9 @@
         <section>
             <h2>Contáctanos</h2>
             <p><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
-             <p>
-                <a href="paginas/reservas.html" target="_blank" rel="noopener noreferrer" id="reserva-retorno">RESERVA</a>
+            <p>
+                <a href="paginas/reservas.html" target="_blank" rel="noopener noreferrer"
+                    id="reserva-retorno">RESERVA</a>
             </p>
         </section>
 
@@ -213,32 +240,30 @@
     </main>
 
     <footer>
-    <div class="pie-contenido">
+        <div class="pie-contenido">
 
-        <div class="pie-bloque">
-            <h2>Rueda Libre</h2>
-            <p>Alquiler de bicicletas en Medellín</p>
-            <p>© 2026 Rueda Libre. ruedalibre.com</p>
+            <div class="pie-bloque">
+                <h2>Rueda Libre</h2>
+                <p>Alquiler de bicicletas en Medellín</p>
+                <p>© 2026 Rueda Libre. ruedalibre.com</p>
+            </div>
+
+            <div class="pie-bloque">
+                <h2>Contacto</h2>
+                <p><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
+            </div>
+
+            <div class="pie-bloque">
+                <h2>Horario</h2>
+                <p>Lunes a viernes: 7:00 a.m. - 7:00 p.m.</p>
+                <p>Sábados, domingos y festivos: 6:00 a.m. - 2:00 p.m.</p>
+            </div>
+
         </div>
-
-        <div class="pie-bloque">
-            <h2>Contacto</h2>
-            <p><a href="mailto:info@ruedalibre.com">info@ruedalibre.com</a></p>
-        </div>
-
-        <div class="pie-bloque">
-            <h2>Horario</h2>
-            <p>Lunes a viernes: 7:00 a.m. - 7:00 p.m.</p>
-            <p>Sábados, domingos y festivos: 6:00 a.m. - 2:00 p.m.</p>
-        </div>
-
-    </div>
-</footer>
-<a href="https://wa.me/573000000000"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="whatsapp-fijo">
-    <img src="img/whatsapp.png" alt="Contactar por WhatsApp">
-</a> 
+    </footer>
+    <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-fijo">
+        <img src="img/whatsapp.png" alt="Contactar por WhatsApp">
+    </a>
 </body>
+
 </html>
