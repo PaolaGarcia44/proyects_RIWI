@@ -395,3 +395,13 @@ CONCLUSIÓN DE UN ENCABEZADO QUE SE ACOMODA FLEXBLOX
 Al estrechar la ventana del navegador el contenido que se muestra se comprime y se reduce, pero al meterme en devtools al mirarlo
 en diferentes dispositivos se ve la mitad del contenido que contiene realmente.
 
+PRUEBAS RESPONSIVE DE LA FLOTA
+
+Ancho de pantalla | Columnas observadas
+1280 px           | [3 columnas de las tarjetas]
+900 px            | [2 columnas de las tarjetas]
+500 px            |[1 columnas de las tarjetas]
+
+Conclusión:
+Se comprobó cómo se reorganizan las tarjetas de bicicletas
+en diferentes anchos de pantalla.
