@@ -389,3 +389,9 @@ Además, quiero fortalecer mi capacidad para identificar y solucionar errores de
 CONCLUSIÓN
 
 Esta semana avancé en la construcción de Rueda Libre Medellín y comprendí mejor cómo se complementan HTML y CSS para crear páginas web funcionales y visualmente organizadas. Aunque todavía necesito practicar algunos conceptos, cada MiniReto me permitió adquirir nuevos conocimientos y desarrollar más confianza al trabajar con código.
+
+CONCLUSIÓN DE UN ENCABEZADO QUE SE ACOMODA FLEXBLOX
+
+Al estrechar la ventana del navegador el contenido que se muestra se comprime y se reduce, pero al meterme en devtools al mirarlo
+en diferentes dispositivos se ve la mitad del contenido que contiene realmente.
+
