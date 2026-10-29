@@ -425,3 +425,13 @@ Usé Flexbox para organizar el logo, el título y el menú, permitiendo distribu
 
 6. Pie de página
 Usé Flexbox para distribuir los bloques de información y alinearlos, manteniendo una separación entre ellos.
+
+CONCLUSIONES DE ERRORES RESPONSIVE:
+
+En 360px las imagenes se comprimen bien pero los textos en la pagina inicial posee problemas, por que se mueve 
+hacia el lado derecho.
+
+En 768px las imagenes se ven bien pero en la parte de mapa se ve demasiado grande y el menu hamburguesa esta a un lado diferente al que lo coloque
+
+En 1280px el icono de WhatsApp se esconde un poquito.
+
