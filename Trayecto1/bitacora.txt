@@ -435,3 +435,45 @@ En 768px las imagenes se ven bien pero en la parte de mapa se ve demasiado grand
 
 En 1280px el icono de WhatsApp se esconde un poquito.
 
+
+
+
+En la organización en cuanto tiempo de manera responsive 
+
+en 
+
+
+COMPARACIÓN: CSS PROPIO VS BOOTSTRAP
+
++----------------------+----------------------------------+----------------------------------+
+| Aspecto              | CSS propio                       | Bootstrap                        |
++----------------------+----------------------------------+----------------------------------+
+| Distribución         | Se define manualmente con CSS.   | Se usan clases de la grilla.     |
++----------------------+----------------------------------+----------------------------------+
+| Diseño responsive    | Se configuran media queries.     | Se usan clases por dispositivo.  |
++----------------------+----------------------------------+----------------------------------+
+| Espaciado            | Se ajusta con margin y gap.      | Se utiliza la clase g-3.         |
++----------------------+----------------------------------+----------------------------------+
+| Imágenes             | Se configura su tamaño en CSS.   | Se utiliza la clase img-fluid.   |
++----------------------+----------------------------------+----------------------------------+
+| Tiempo de desarrollo | Requiere más configuración.      | Permite avanzar más rápido.      |
++----------------------+----------------------------------+----------------------------------+
+| Control del diseño   | Mayor libertad de personalización.| Depende de las clases Bootstrap.|
++----------------------+----------------------------------+----------------------------------+
+
+TIEMPO INVERTIDO:
+BOOSTRAP solamente en 25 minutos y solo por que me demore en conocer los conceptos, pero en cuanto optimización me ahorro demasiado tiempo,
+en CSS me demore 40 minutos en realizarlo con los estilos y con las lineas y demás.
+
+LÍNEAS DE CSS:
+CSS propio: [15 líneas]
+Bootstrap: [ entre 4 y 3 utilizadas por contenedor]
+
+¿QUÉ ME DIO BOOTSTRAP SIN ESFUERZO?
+Me permitió organizar las bicicletas según el tamaño de la pantalla,
+adaptar las imágenes y agregar espacios entre las tarjetas.
+
+¿QUÉ CONTROL PERDÍ?
+Perdí parte del control sobre la distribución y los espacios
+personalizados, porque ahora dependen de las clases de Bootstrap.
+

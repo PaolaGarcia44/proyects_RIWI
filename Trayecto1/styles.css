@@ -98,10 +98,11 @@ footer {
 
 .barra-superior {
     display: flex;
-    flex-direction: column;
+    flex-direction:  column-reverse;
     align-items: center;
     gap: var(--espacio-mediano);
     padding: var(--espacio-mediano);
+      
 }
 
 
