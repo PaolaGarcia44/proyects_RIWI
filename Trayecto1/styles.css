@@ -29,7 +29,7 @@
 
 body {
     font-family: var(--fuente-textos);
-    margin: auto;
+    margin: 0;
     padding: 0;
     background-color: var(--color-crema);
     color: var(--color-azul-oscuro);
@@ -114,6 +114,13 @@ footer {
     padding: 0.5rem 1rem;
 }
 
+.barra-superior .navbar .nav-link:hover {
+    color: var(--color-crema);
+}
+
+.barra-superior .navbar .nav-link.active {
+    color: var(--color-crema);
+}
 
 
 /* =========================================
@@ -248,8 +255,6 @@ nav summary {
 ========================================= */
 
 /* Botón para reservar */
-
-
 
 #reserva-button {
     display: block;
@@ -434,20 +439,6 @@ iframe {
     display: block;
 }
 
-
-#flota {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#flota h2 {
-    width: 100%;
-    text-align: center;
-}
-
 #flota article {
     min-width: 0;
     padding: var(--espacio-pequeno);
@@ -484,7 +475,6 @@ iframe {
 
 .bicicleta {
     position: relative;
-    width: 250px;
     padding: 15px;
     text-align: center;
     border: 1px solid var(--color-verde-ruta);
@@ -509,20 +499,6 @@ iframe {
     align-self: center;
 }
 
-
-
-#rutas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    box-sizing: border-box;
-}
-
-#rutas h2 {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
 .ruta {
     min-width: 0;
     padding: 15px;
@@ -543,6 +519,7 @@ iframe {
 /* =========================================
    9. TABLAS
 ========================================= */
+/* AJUSTES QUE TODAVÍA UTILIZA LA PÁGINA TARIFAS */
 
 table {
     width: 100%;
@@ -609,7 +586,7 @@ textarea:focus {
     border-color: var(--color-azul-oscuro);
 }
 
-
+/* DISTRIBUCIÓN QUE TODAVÍA UTILIZA LA PÁGINA RESERVAS */
 #reservas {
     display: grid;
     grid-template-columns: 1fr;
@@ -660,16 +637,6 @@ textarea:focus {
 /* =========================================
    12. PORTADA
 ========================================= */
-
-#portada {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: var(--espacio-grande);
-    min-height: auto;
-    box-sizing: border-box;
-}
-
 
 .portada-texto {
     display: flex;
@@ -733,46 +700,19 @@ footer a {
     margin-bottom: var(--espacio-grande);
 }
 
-.grilla-beneficios {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--espacio-mediano);
-}
-
 .beneficio {
     padding: var(--espacio-mediano);
-    border: 1px solid var(--color-borde);
+    border: 1px solid var(--color-verde-ruta);
     border-radius: 5px;
     text-align: center;
     min-width: 0;
     box-sizing: border-box;
 }
 
-flota2 {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-flota2 h2 {
-    width: 100%;
-    text-align: center;
-}
 
 /* TABLETAS: desde 768px */
 @media (min-width: 768px) {
-
-  @media (min-width: 768px) {
-
-    #portada {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #rutas {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 
     #reservas {
         grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -794,21 +734,11 @@ flota2 h2 {
     .marca h1 {
         text-align: left;
     }
-
-    .grilla-beneficios {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 
+/* CELULARES: hasta 480px */
 @media (max-width: 480px) {
 
-    .grilla-beneficios {
-        grid-template-columns: 1fr;
-    }
-
-    #portada,
-    #rutas,
     #reservas {
         grid-template-columns: 1fr;
     }
@@ -830,23 +760,9 @@ flota2 h2 {
     .marca h1 {
         text-align: center;
     }
-
 }
 
-@media (min-width: 1200px) {
-
-    #rutas {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .pie-contenido {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-}
-
+/* AJUSTES DE TABLAS PARA CELULARES */
 @media (max-width: 600px) {
 
     table {
@@ -860,81 +776,14 @@ flota2 h2 {
         padding: 0.35rem;
         overflow-wrap: break-word;
     }
-
 }
-
-
-
-
 
 /* ESCRITORIO: desde 1200px */
 @media (min-width: 1200px) {
 
-   
-
-     #rutas {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
     .pie-contenido {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
     }
-
 }
-
-}
-
-/* Ajustes de tablas para celulares */
-@media (max-width: 480px) {
-
-     .grilla-beneficios {
-        grid-template-columns: 1fr;
-    }
-
-    #portada,
-    #rutas,
-    #reservas {
-        grid-template-columns: 1fr;
-    }
-
-    .campos-cortos {
-        grid-template-columns: 1fr;
-    }
-
-    .barra-superior {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .marca {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .marca h1 {
-        text-align: center;
-    }
-
-}
-
-@media (max-width: 600px) {
-
-    table {
-        width: 100%;
-        table-layout: fixed;
-        font-size: 0.75rem;
-    }
-
-    th,
-    td {
-        padding: 0.35rem;
-        overflow-wrap: break-word;
-    }
-
-
-
-
-}
-

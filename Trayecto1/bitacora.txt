@@ -496,3 +496,17 @@ Organiza los elementos en fila horizontal desde el tamaño mediano de pantalla (
 Distribuye los elementos dejando espacio entre ellos dentro del contenedor.
 
 
+CONFLICTOS ENTRE BOOTSTRAP Y CSS PROPIO
+
+1. Estilos del body:
+Conflicto: Bootstrap y mi CSS definían diferentes valores para la fuente, el margen, el color del texto y el fondo.
+Solución: Conservé mis estilos personalizados y cambié margin: auto por margin: 0.
+
+2. Color de los enlaces:
+Conflicto: Bootstrap establecía colores predeterminados para los enlaces del menú, mientras que mi diseño necesitaba mantener el color blanco sobre el fondo verde.
+Solución: Personalicé los estados normal, hover y active utilizando los colores definidos en mis variables CSS.
+
+3. Distribución del encabezado:
+Revisión: Inspeccioné la clase .barra-superior con DevTools.
+Resultado: La distribución Flexbox de mi CSS funciona correctamente y no encontré declaraciones incompatibles.
+Solución: Conservé la configuración existente.
