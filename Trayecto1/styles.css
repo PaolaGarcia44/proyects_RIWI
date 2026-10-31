@@ -96,19 +96,23 @@ footer {
 
 .barra-superior {
     display: flex;
-    flex-direction:  column-reverse;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: var(--espacio-mediano);
     padding: var(--espacio-mediano);
-      
 }
 
 .barra-superior nav {
-    order: -1;
+    order: 0;
 }
 
+.barra-superior .navbar .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
 
 
 
@@ -556,21 +560,7 @@ td {
     text-align: left;
 }
 
-/* Ajustes de tablas para celulares */
-@media (max-width: 600px) {
 
-    table {
-        width: 100%;
-        table-layout: fixed;
-        font-size: 0.75rem;
-    }
-
-    th,
-    td {
-        padding: 0.35rem;
-        overflow-wrap: break-word;
-    }
-}
 
 /* =========================================
    10. FORMULARIOS
@@ -727,30 +717,71 @@ footer a {
     gap: 15px;
 }
 
+
+/* =========================================
+   14. PAGINA CATALOGO
+========================================= */
+
+.beneficios {
+    padding: var(--espacio-grande);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.beneficios h2 {
+    text-align: center;
+    margin-bottom: var(--espacio-grande);
+}
+
+.grilla-beneficios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--espacio-mediano);
+}
+
+.beneficio {
+    padding: var(--espacio-mediano);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    text-align: center;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+flota2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+flota2 h2 {
+    width: 100%;
+    text-align: center;
+}
+
 /* TABLETAS: desde 768px */
 @media (min-width: 768px) {
 
-    /* Portada: texto e imagen */
+  @media (min-width: 768px) {
+
     #portada {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Galería: dos tarjetas por fila */
     #rutas {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Reservas: formulario y contacto 2:1 */
     #reservas {
         grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     }
 
-    /* Documento y celular en una fila */
     .campos-cortos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Encabezado horizontal */
     .barra-superior {
         flex-direction: row;
         justify-content: space-between;
@@ -763,21 +794,147 @@ footer a {
     .marca h1 {
         text-align: left;
     }
+
+    .grilla-beneficios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
+@media (max-width: 480px) {
 
-/* ESCRITORIO: desde 1200px */
+    .grilla-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    #portada,
+    #rutas,
+    #reservas {
+        grid-template-columns: 1fr;
+    }
+
+    .campos-cortos {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca h1 {
+        text-align: center;
+    }
+
+}
+
 @media (min-width: 1200px) {
 
-    /* Galería: tres tarjetas en una fila */
     #rutas {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    /* Pie de página horizontal */
     .pie-contenido {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
     }
+
 }
+
+@media (max-width: 600px) {
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 0.75rem;
+    }
+
+    th,
+    td {
+        padding: 0.35rem;
+        overflow-wrap: break-word;
+    }
+
+}
+
+
+
+
+
+/* ESCRITORIO: desde 1200px */
+@media (min-width: 1200px) {
+
+   
+
+     #rutas {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .pie-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+}
+
+}
+
+/* Ajustes de tablas para celulares */
+@media (max-width: 480px) {
+
+     .grilla-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    #portada,
+    #rutas,
+    #reservas {
+        grid-template-columns: 1fr;
+    }
+
+    .campos-cortos {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .marca h1 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 0.75rem;
+    }
+
+    th,
+    td {
+        padding: 0.35rem;
+        overflow-wrap: break-word;
+    }
+
+
+
+
+}
+

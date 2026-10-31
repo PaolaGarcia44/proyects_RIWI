@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+
     <meta name="description"
         content="Rueda Libre es una empresa de alquiler de bicicletas en Medellín, ofreciendo una amplia variedad de bicicletas para todos los gustos y necesidades.">
+
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,26 +28,53 @@
     <header class="portada">
 
         <div class="barra-superior">
+
             <div class="marca">
                 <img src="img/logo.png" alt="Logo de Rueda Libre" width="200" height="200" class="logo">
-                <h1>Alquiler de bicicletas en Medellín</h1>
+
             </div>
+            <nav class="navbar navbar-expand-lg navbar-dark">
 
-            <nav>
-                <details>
-                    <summary>
-                        <img src="img/menu.png" alt="Icono de menú" width="30" height="30">
-                    </summary>
-                    <ul id="menu">
-                        <li><a href="DAY1.html" class="active">Inicio</a></li>
-                        <li><a href="paginas/reservas.html">Reservas</a></li>
-                        <li><a href="paginas/tarifas.html">Tarifas</a></li>
-                    </ul>
-                </details>
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item">
+                                <a href="DAY1.html" class="nav-link active" aria-current="page">
+                                    Inicio
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="paginas/reservas.html" class="nav-link">
+                                    Reservas
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="paginas/tarifas.html" class="nav-link">
+                                    Tarifas
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </nav>
+
         </div>
-
-
 
     </header>
 
@@ -69,7 +100,7 @@
             <div class="portada-imagen">
 
                 <img src="\Trayecto1\img\bici.jpg" alt="Bicicleta para recorrer Medellín">
-                <img src="img\bici.jpg" alt="Bicicleta para recorrer Medellín">
+               
             </div>
         </section>
 
@@ -80,7 +111,7 @@
             <article class="ruta">
 
                 <img src="\Trayecto1\img\ruta-calles.jpg" alt="Ruta en bicicleta por el centro de Medellín">
-                <img src="img\ruta-calles.jpg" alt="Ruta en bicicleta por el centro de Medellín">
+                
 
                 <h3>Ruta Centro</h3>
                 <p>Descubre las calles y lugares del centro.</p>
@@ -89,14 +120,14 @@
             <article class="ruta">
 
                 <img src="\Trayecto1\img\ruta-verde.jpg" alt="Ruta en bicicleta por zonas verdes">
-                <img src="img\ruta-verde.jpg" alt="Ruta en bicicleta por zonas verdes">
+            
                 <h3>Ruta Verde</h3>
                 <p>Disfruta un recorrido rodeado de naturaleza.</p>
             </article>
 
             <article class="ruta">
                 <img src="\Trayecto1\img\ruta-ciclorruta.jpg" alt="Recorrido por una ciclorruta">
-                <img src="img\ruta-ciclorruta.jpg" alt="Recorrido por una ciclorruta">
+            
 
                 <h3>Ruta Ciclorruta</h3>
                 <p>Explora Medellín sobre dos ruedas.</p>
@@ -113,7 +144,6 @@
             <h2>Nuestros servicios</h2>
 
             <article>
-                <h3>Alquiler de bicicletas</h3>
                 <p>Ofrecemos una amplia variedad de <strong>bicicletas</strong> para todos los gustos y necesidades.</p>
             </article>
         </section>
@@ -273,6 +303,8 @@
     <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-fijo">
         <img src="img/whatsapp.png" alt="Contactar por WhatsApp">
     </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

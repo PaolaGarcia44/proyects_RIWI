@@ -477,3 +477,22 @@ adaptar las imágenes y agregar espacios entre las tarjetas.
 Perdí parte del control sobre la distribución y los espacios
 personalizados, porque ahora dependen de las clases de Bootstrap.
 
+
+CLASES DE BOOTSTRAP CONSULTADAS
+
+1. navbar-expand-lg
+Permite que el menú de navegación se muestre expandido horizontalmente en pantallas grandes y como menú desplegable en pantallas pequeñas.
+
+2. d-flex
+Activa el sistema Flexbox para organizar los elementos de un contenedor.
+
+3. flex-column
+Organiza los elementos de forma vertical, uno debajo del otro.
+
+4. flex-md-row
+Organiza los elementos en fila horizontal desde el tamaño mediano de pantalla (768px).
+
+5. justify-content-between
+Distribuye los elementos dejando espacio entre ellos dentro del contenedor.
+
+
