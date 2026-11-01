@@ -29,8 +29,6 @@
 
 body {
     font-family: var(--fuente-textos);
-    margin: 0;
-    padding: 0;
     background-color: var(--color-crema);
     color: var(--color-azul-oscuro);
 }
@@ -40,11 +38,6 @@ img {
     height: auto;
 }
 
-main {
-    max-width: 60rem;
-    margin-inline: auto;
-    padding: 1rem;
-}
 
 section {
     margin: var(--espacio-grande) auto;
@@ -56,10 +49,8 @@ section {
 
 aside {
     background-color: var(--color-blanco);
-    padding: var(--espacio-mediano);
     border-radius: 5px;
-    margin: var(--espacio-grande) auto;
-    width: 100%;
+    
 }
 
 
@@ -96,15 +87,7 @@ footer {
 
 .barra-superior {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--espacio-mediano);
     padding: var(--espacio-mediano);
-}
-
-.barra-superior nav {
-    order: 0;
 }
 
 .barra-superior .navbar .nav-link {
@@ -114,13 +97,6 @@ footer {
     padding: 0.5rem 1rem;
 }
 
-.barra-superior .navbar .nav-link:hover {
-    color: var(--color-crema);
-}
-
-.barra-superior .navbar .nav-link.active {
-    color: var(--color-crema);
-}
 
 
 /* =========================================
@@ -151,12 +127,7 @@ p a {
     text-decoration: none;
 }
 
-.bienvenida {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: var(--espacio-grande);
-}
+
 
 .marca {
     display: flex;
@@ -171,87 +142,8 @@ p a {
 }
 
 
-
 /* =========================================
-   5. MENÚ DE NAVEGACIÓN
-========================================= */
-
-
-nav {
-    order: 1;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-nav summary {
-    cursor: pointer;
-    padding: 10px 15px;
-    background-color: var(--color-verde-ruta);
-    color: var(--color-blanco);
-    border-radius: 5px;
-    text-align: left;
-    list-style: none;
-}
-
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--color-verde-ruta);
-    padding: var(--espacio-mediano);
-    margin: 0;
-    width: 180px;
-    box-sizing: border-box;
-    justify-content: flex-start;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-    flex-direction: column;
-    gap: var(--espacio-pequeno);
-    width: max-content;
-    max-width: calc(100vw - 2rem);
-
-}
-
-#menu li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#menu a {
-    display: block;
-    color: var(--color-blanco);
-    text-decoration: none;
-    margin: 0 var(--espacio-pequeno);
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#menu a:hover {
-    background-color: var(--color-verde-claro);
-    color: var(--color-azul-oscuro);
-}
-
-#menu a:focus {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-blanco);
-    outline: 3px solid var(--color-azul-oscuro);
-    outline-offset: 2px;
-}
-
-#menu a.active {
-    background-color: var(--color-verde-claro);
-    color: var(--color-azul-oscuro);
-}
-
-
-/* =========================================
-   6. BOTONES
+   5. BOTONES
 ========================================= */
 
 /* Botón para reservar */
@@ -363,32 +255,9 @@ nav summary {
 
 
 /* =========================================
-   7. SERVICIOS Y TARJETAS
+   6. SERVICIOS Y TARJETAS
 ========================================= */
 
-.servicios {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.servicio {
-    position: relative;
-    width: 250px;
-    padding: 15px;
-    text-align: center;
-    border: 1px solid var(--color-verde-ruta);
-    border-radius: 5px;
-    margin: 0;
-}
-
-.servicio img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
 
 .nuevo {
     position: absolute;
@@ -404,32 +273,9 @@ nav summary {
 
 
 /* =========================================
-   8. IMÁGENES Y CONTENIDO MULTIMEDIA
+   7. IMÁGENES Y CONTENIDO MULTIMEDIA
 ========================================= */
 
-figure {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin: var(--espacio-pequeno) auto;
-}
-
-figure img {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 2px;
-}
-
-#imagen-montana {
-    display: block;
-    margin: 20px auto;
-    max-width: 50%;
-    height: auto;
-}
 
 iframe {
     border: 10px solid var(--color-blanco);
@@ -517,7 +363,7 @@ iframe {
 }
 
 /* =========================================
-   9. TABLAS
+   8. TABLAS
 ========================================= */
 /* AJUSTES QUE TODAVÍA UTILIZA LA PÁGINA TARIFAS */
 
@@ -540,7 +386,7 @@ td {
 
 
 /* =========================================
-   10. FORMULARIOS
+   9. FORMULARIOS
 ========================================= */
 
 form {
@@ -558,13 +404,6 @@ form label {
     margin-bottom: 0.5rem;
 }
 
-form input,
-form select,
-form textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.75rem;
-}
 
 form button {
     padding: 1rem 2rem;
@@ -586,24 +425,9 @@ textarea:focus {
     border-color: var(--color-azul-oscuro);
 }
 
-/* DISTRIBUCIÓN QUE TODAVÍA UTILIZA LA PÁGINA RESERVAS */
-#reservas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    align-items: start;
-    box-sizing: border-box;
-    width: 100%;
-}
 
-.formulario-reservas,
-.informacion-contacto {
-    min-width: 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
 /* =========================================
-   11. ENLACE FIJO DE WHATSAPP
+   10. ENLACE FIJO DE WHATSAPP
 ========================================= */
 
 .whatsapp-fijo {
@@ -634,32 +458,12 @@ textarea:focus {
 }
 
 
-/* =========================================
-   12. PORTADA
-========================================= */
-
-.portada-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.portada-imagen img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 5px;
-}
 
 /* =========================================
-   13. PIE DE PAGINA
+   11. PIE DE PAGINA
 ========================================= */
 .pie-contenido {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--espacio-mediano);
     padding: var(--espacio-mediano);
 }
 
@@ -678,89 +482,7 @@ footer a {
     text-decoration: underline;
 }
 
-.campos-cortos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
 
-
-/* =========================================
-   14. PAGINA CATALOGO
-========================================= */
-
-.beneficios {
-    padding: var(--espacio-grande);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.beneficios h2 {
-    text-align: center;
-    margin-bottom: var(--espacio-grande);
-}
-
-.beneficio {
-    padding: var(--espacio-mediano);
-    border: 1px solid var(--color-verde-ruta);
-    border-radius: 5px;
-    text-align: center;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-
-
-/* TABLETAS: desde 768px */
-@media (min-width: 768px) {
-
-    #reservas {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    }
-
-    .campos-cortos {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .barra-superior {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .marca {
-        flex-direction: row;
-    }
-
-    .marca h1 {
-        text-align: left;
-    }
-}
-
-/* CELULARES: hasta 480px */
-@media (max-width: 480px) {
-
-    #reservas {
-        grid-template-columns: 1fr;
-    }
-
-    .campos-cortos {
-        grid-template-columns: 1fr;
-    }
-
-    .barra-superior {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .marca {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .marca h1 {
-        text-align: center;
-    }
-}
 
 /* AJUSTES DE TABLAS PARA CELULARES */
 @media (max-width: 600px) {
@@ -778,12 +500,3 @@ footer a {
     }
 }
 
-/* ESCRITORIO: desde 1200px */
-@media (min-width: 1200px) {
-
-    .pie-contenido {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-}

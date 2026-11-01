@@ -510,3 +510,41 @@ Solución: Personalicé los estados normal, hover y active utilizando los colore
 Revisión: Inspeccioné la clase .barra-superior con DevTools.
 Resultado: La distribución Flexbox de mi CSS funciona correctamente y no encontré declaraciones incompatibles.
 Solución: Conservé la configuración existente.
+
+
+COMPARATIVA DE VERSIONES DE CSS
+
++----------------------+----------------------+----------------------+
+| Caracteristica       | Version 1.5          | Version actual       |
++----------------------+----------------------+----------------------+
+| Archivo              | Reto1/styles.css     | Trayecto1/styles.css |
+| Cantidad de lineas   | 636                  | 502                  |
+| Tiempo invertido     | 1 semana             | 2 a 3 dias           |
+| Distribucion         | CSS propio           | CSS+Bootstrap        |
++----------------------+----------------------+----------------------+
+
+VENTAJAS DE LA VERSION 1.5:
+- Permitía personalizar la apariencia mediante CSS.
+- Ofrecía mayor control sobre la distribución de los elementos.
+
+DESVENTAJAS DE LA VERSION 1.5:
+- Necesitaba más código para organizar los elementos.
+- Requería más trabajo para adaptar la página a diferentes pantallas.
+
+VENTAJAS DE LA VERSION ACTUAL:
+- Bootstrap facilita la organización del contenido.
+- Se redujo la cantidad de líneas de CSS.
+- Permite aprovechar clases prediseñadas para organizar la página.
+
+DESVENTAJAS DE LA VERSION ACTUAL:
+- Es necesario conocer las clases de Bootstrap.
+- Algunos ajustes requieren modificar el HTML.
+- Se debe tener cuidado al eliminar estilos para no afectar la presentación.
+
+CONCLUSION:
+el ejercicio me permitió comprender que Bootstrap facilita la
+organización de una página web y reduce la cantidad de código CSS.
+En esta versión logré reducir 134 líneas y trabajar en menos tiempo.
+También aprendí que CSS sigue siendo importante para personalizar
+la apariencia de la página. Combinar ambas herramientas permite
+obtener un código más organizado y adaptable a diferentes dispositivos.
