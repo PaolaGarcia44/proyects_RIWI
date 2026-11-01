@@ -8,6 +8,7 @@
 
     <link rel="icon" type="image/png" href="\Trayecto1\img\favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,15 +38,16 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="../DAY1.html">Inicio</a>
+                                <a class="nav-link bi bi-house-door" href="../DAY1.html">Inicio</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="reservas.html">Reservas</a>
+                                <a class="nav-link bi bi-calendar-check" href="reservas.html">Reservas</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="tarifas.html" aria-current="page">Tarifas</a>
+                                <a class="nav-link  active bi bi-currency-dollar" href="tarifas.html"
+                                    aria-current="page">Tarifas</a>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +68,7 @@
             <div class="col-12 col-lg-8">
 
                 <section>
-                    <h2>Tarifas de alquiler</h2>
+                    <h2 class="titulo-seccion">Tarifas de alquiler</h2>
                     <div class="table-responsive">
                         <table border="1">
                             <thead>
@@ -173,46 +175,47 @@
         </div>
 
         <p class="my-4">
-            <a href="reservas.html" target="_blank" rel="noopener noreferrer" id="reserva-button2" class="btn btn-primary btn-lg">RESERVAR AHORA</a>
+            <a href="reservas.html" target="_blank" rel="noopener noreferrer" id="reserva-button2"
+                class="btn btn-naranja btn-lg">RESERVAR AHORA</a>
         </p>
 
 
     </main>
 
-   <footer>
-    <div class="container">
-        <div class="pie-contenido row g-3">
+    <footer class="pie-personalizado">
+        <div class="container">
+            <div class="pie-contenido row g-3">
 
-            <div class="pie-bloque col-12 col-md-4">
-                <h2>Rueda Libre</h2>
-                <p>Alquiler de bicicletas en Medellín</p>
-                <p>© 2026 Rueda Libre. ruedalibre.com</p>
+                <div class="pie-bloque col-12 col-md-4">
+                    <h2>Rueda Libre</h2>
+                    <p>Alquiler de bicicletas en Medellín</p>
+                    <p>© 2026 Rueda Libre. ruedalibre.com</p>
+                </div>
+
+                <div class="pie-bloque col-12 col-md-4">
+                    <h2>Contacto</h2>
+                    <p>
+                        <a href="mailto:info@ruedalibre.com">
+                            info@ruedalibre.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="pie-bloque col-12 col-md-4">
+                    <h2>Horario</h2>
+                    <p>Lunes a viernes: 7:00 a.m. - 7:00 p.m.</p>
+                    <p>Sábados, domingos y festivos: 6:00 a.m. - 2:00 p.m.</p>
+                </div>
+
             </div>
-
-            <div class="pie-bloque col-12 col-md-4">
-                <h2>Contacto</h2>
-                <p>
-                    <a href="mailto:info@ruedalibre.com">
-                        info@ruedalibre.com
-                    </a>
-                </p>
-            </div>
-
-            <div class="pie-bloque col-12 col-md-4">
-                <h2>Horario</h2>
-                <p>Lunes a viernes: 7:00 a.m. - 7:00 p.m.</p>
-                <p>Sábados, domingos y festivos: 6:00 a.m. - 2:00 p.m.</p>
-            </div>
-
         </div>
-    </div>
-</footer>
-    <a href="https://wa.me/573000000000"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="whatsapp-fijo btn btn-outline-primary btn-sm">
-    <img src="../img/whatsapp.png" alt="Contactar por WhatsApp">
-</a>
+    </footer>
+    <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-fijo btn btn-outline-primary btn-sm" aria-label="Contactar por WhatsApp">
+
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+
+    </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

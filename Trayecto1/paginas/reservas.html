@@ -8,6 +8,7 @@
     <meta name="description" content="Reserva tu bicicleta con Rueda Libre en Medellín.">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,15 +41,16 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="../DAY1.html">Inicio</a>
+                                <a class="nav-link bi bi-house-door" href="../DAY1.html">Inicio</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="reservas.html" aria-current="page">Reservas</a>
+                                <a class="nav-link active bi bi-calendar-check" href="reservas.html"
+                                    aria-current="page">Reservas</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="tarifas.html">Tarifas</a>
+                                <a class="nav-link bi bi-currency-dollar" href="tarifas.html">Tarifas</a>
                             </li>
                         </ul>
                     </div>
@@ -59,7 +61,7 @@
     </header>
 
     <main class="container">
-        <section id="reservas" class="row g-4">
+        <section id="reservas" class="row g-4 ">
 
             <div class="alert alert-info alert-dismissible fade show" role="alert">
                 <strong>¡Recuerda!</strong> Ten tu documento de identidad a la mano para realizar tu reserva.
@@ -69,7 +71,7 @@
             </div>
 
             <div class="formulario-reservas col-12 col-md-8">
-                <h2>Formulario de reserva</h2>
+                <h2 class="titulo-seccion">Formulario de reserva</h2>
 
                 <form method="post" class="needs-validation" novalidate>
 
@@ -221,9 +223,11 @@
             <aside class="informacion-contacto col-12 col-md-4">
                 <h2>Información de contacto</h2>
 
-                <p><strong>Teléfono:</strong> Agrega el número de contacto</p>
-                <p><strong>Correo:</strong> Agrega el correo de contacto</p>
-                <p><strong>Ubicación:</strong> Medellín, Colombia</p>
+                <p><strong><i class="bi bi-telephone" aria-hidden="true"></i>Teléfono:</strong> Agrega el número de
+                    contacto</p>
+                <p><strong><i class="bi bi-envelope" aria-hidden="true"></i>Correo:</strong> Agrega el correo de
+                    contacto</p>
+                <p><strong><i class="bi bi-geo-alt" aria-hidden="true"></i>Ubicación:</strong> Medellín, Colombia</p>
 
                 <h3>¿Necesitas ayuda?</h3>
                 <p>Contáctanos para resolver tus dudas sobre las reservas.</p>
@@ -232,7 +236,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="pie-personalizado">
         <div class="container">
             <div class="pie-contenido row g-3">
 
@@ -261,8 +265,10 @@
         </div>
     </footer>
     <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer"
-        class="whatsapp-fijo btn btn-outline-primary btn-sm">
-        <img src="../img/whatsapp.png" alt="Contactar por WhatsApp">
+        class="whatsapp-fijo btn btn-outline-primary btn-sm" aria-label="Contactar por WhatsApp">
+
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+
     </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -291,51 +297,47 @@
     </script>
 
     <!-- Modal de políticas de alquiler -->
-<div class="modal fade" id="modalPoliticas" tabindex="-1"
-    aria-labelledby="tituloPoliticas" aria-hidden="true">
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="tituloPoliticas" aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
 
-        <div class="modal-content">
+            <div class="modal-content">
 
-            <div class="modal-header">
-                <h5 class="modal-title" id="tituloPoliticas">
-                    Políticas de alquiler
-                </h5>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloPoliticas">
+                        Políticas de alquiler
+                    </h5>
 
-                <button type="button" class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Cerrar">
-                </button>
-            </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar">
+                    </button>
+                </div>
 
-            <div class="modal-body">
+                <div class="modal-body">
 
-                <ol>
-                    <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
+                    <ol>
+                        <li>Presenta tu documento de identidad original al recoger la bicicleta.</li>
 
-                    <li>Revisa la bicicleta con el asesor antes de salir.</li>
+                        <li>Revisa la bicicleta con el asesor antes de salir.</li>
 
-                    <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
+                        <li>Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.</li>
 
-                    <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
+                        <li>Los daños por mal uso se cobran según el costo de la reparación.</li>
 
-                    <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
-                </ol>
+                        <li>Los menores de edad deben estar acompañados por un adulto responsable.</li>
+                    </ol>
 
-            </div>
+                </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary"
-                    data-bs-dismiss="modal">
-                    Entendido
-                </button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Entendido
+                    </button>
+                </div>
+
             </div>
 
         </div>
-
     </div>
-</div>
 </body>
 
 </html>

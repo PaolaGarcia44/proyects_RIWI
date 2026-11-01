@@ -20,6 +20,18 @@
     --espacio-pequeno: 0.5rem;
     --espacio-mediano: 1rem;
     --espacio-grande: 2rem;
+
+
+      /* Variables globales de Bootstrap 5.0.2 */
+    --bs-primary: #317F43;
+    --bs-primary-rgb: 49, 127, 67;
+
+    --bs-body-font-family: 'Open Sans', Arial, sans-serif;
+
+    --bs-link-color: #191970;
+    --bs-link-hover-color: #317F43;
+
+    --bs-border-radius: 8px;
 }
 
 
@@ -148,88 +160,43 @@ p a {
 
 /* Botón para reservar */
 
-#reserva-button {
-    display: block;
-    width: fit-content;
-    background-color: var(--color-naranja-pedal);
+.btn-primary {
+    background-color: var(--color-verde-ruta);
+    border-color: var(--color-verde-ruta);
     color: var(--color-blanco);
-    padding: var(--espacio-mediano);
-    border-radius: 5px;
-    text-decoration: none;
-    margin: var(--espacio-mediano) auto;
-    text-align: center;
 }
-
-#reserva-button:hover {
-    background-color: var(--color-verde-claro);
-    color: var(--color-azul-oscuro);
-}
-
-#reserva-button:focus {
-    background-color: var(--color-naranja-pedal);
+.btn-primary:hover {
+    background-color: #276638;
+    border-color: #276638;
     color: var(--color-blanco);
-    outline: 3px solid var(--color-azul-oscuro);
-    outline-offset: 3px;
 }
 
-#reserva-button2 {
-    display: block;
-    background-color: var(--color-naranja-pedal);
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #1F522D;
+    border-color: #1F522D;
     color: var(--color-blanco);
-    padding: var(--espacio-mediano);
-    border-radius: 5px;
-    text-decoration: none;
-    margin: var(--espacio-mediano) auto;
-    text-align: center;
-
 }
 
-#reserva-button2:hover {
-    background-color: var(--color-verde-claro);
-    color: var(--color-azul-oscuro);
-}
-
-#reserva-button2:focus {
+.btn-naranja {
     background-color: var(--color-naranja-pedal);
-    color: var(--color-blanco);
-    outline: 3px solid var(--color-azul-oscuro);
-    outline-offset: 3px;
+    border-color: var(--color-naranja-pedal);
+    color: white;
 }
 
-
-/* Botón para enviar la reserva */
-
-#enviar-reserva {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-blanco);
-    padding: var(--espacio-pequeno) var(--espacio-grande);
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    margin: var(--espacio-mediano) auto;
+.btn-naranja:hover {
+    background-color: #E66D17;
+    border-color: #E66D17;
+    color: #191970;
 }
 
-#enviar-reserva:hover {
-    background-color: var(--color-verde-claro);
+.btn-naranja:active,
+.btn-naranja.active {
+    background-color: #D96512;
+    border-color: #D96512;
+    color: #191970;
 }
 
-
-/* Botón para regresar */
-
-#reserva-retorno {
-    background-color: var(--color-naranja-pedal);
-    color: var(--color-blanco);
-    padding: var(--espacio-pequeno) var(--espacio-mediano);
-    border-radius: 5px;
-    text-decoration: none;
-    margin: var(--espacio-mediano) auto;
-    display: block;
-    width: fit-content;
-}
-
-#reserva-retorno:hover {
-    background-color: var(--color-verde-claro);
-}
 
 
 /* =========================================
@@ -355,29 +322,24 @@ textarea:focus {
 
 .whatsapp-fijo {
     position: fixed;
-    right: 20px;
     bottom: 20px;
-    left: auto;
-    background-color: transparent;
-    padding: 0;
-    border-radius: 50%;
+    right: 20px;
     z-index: 1000;
-    display: inline-block;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    color: var(--color-blanco);
+    background-color: var(--color-verde-ruta);  
 }
 
-.whatsapp-fijo img {
-    width: 70px;
-    height: 70px;
-    display: block;
-}
-
-.whatsapp-fijo:hover {
-    opacity: 0.8;
-}
-
-.whatsapp-fijo:focus-visible {
-    outline: 2px solid var(--color-naranja-pedal);
-    outline-offset: 3px;
+.whatsapp-fijo i {
+    font-size: 28px;
 }
 
 
@@ -385,21 +347,33 @@ textarea:focus {
 /* =========================================
    11. PIE DE PAGINA
 ========================================= */
-.pie-contenido {
-    display: flex;
-    padding: var(--espacio-mediano);
+
+
+.portada-personalizada {
+    background-color: var(--color-crema);
+    color: var(--color-azul-oscuro);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
 }
 
-.pie-bloque {
-    flex: 1;
-    text-align: left;
+.titulo-seccion {
+    color: var(--color-azul-oscuro);
+    font-family: var(--fuente-titulos);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--color-verde-ruta);
+    padding-bottom: 0.5rem;
 }
 
-.pie-bloque h2 {
-    margin-top: 0;
-    font-size: 1.2rem;
+.pie-personalizado {
+    background-color: var(--color-verde-ruta);
+    color: var(--color-blanco);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 4px solid var(--color-naranja-pedal);
 }
-
 footer a {
     color: var(--color-blanco);
     text-decoration: underline;

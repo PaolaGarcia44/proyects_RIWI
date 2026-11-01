@@ -1,12 +1,6 @@
 BITACORA DEL RETO 1: RUEDA LIBRE
 
-1. Objetivo
-
-Documentar la estructura del sitio de alquiler de bicicletas, sus rutas,
-la comunicación local y las decisiones de semántica, accesibilidad, color y
-validación del formulario de reservas.
-
-2. Archivos revisados
+1. Archivos revisados
 
 - DAY1.html: página de inicio del sitio.
 - paginas/reservas.html: formulario para solicitar una reserva.
@@ -18,23 +12,25 @@ No se encontraron archivos CSS ni JavaScript en Reto1. Se documenta su papel
 previsto en la sección 3, pero actualmente el navegador presenta la estructura
 y ejecuta la validación nativa de HTML.
 
-3. Rol de HTML, CSS y JavaScript
+2. Rol de HTML, CSS y JavaScript
 
-- HTML define la estructura, el contenido y el significado de la interfaz.
-  Ejemplo concreto: en reservas.html, `form`, `fieldset`, `legend`, `label` e
+- HTML: define la estructura, el contenido y el significado de la interfaz.
+  Ejemplo concreto de las etiquetas y pestañas;
+  en reservas.html, `form`, `fieldset`, `legend`, `label` e
   `input` organizan la reserva y permiten validar campos como correo, fecha y
   cantidad.
 - CSS controlará la presentación visual, el espaciado, la distribución
   responsive y el contraste. Ejemplo concreto para este sitio:
   `body { color: #1F2937; background: #FFF8E7; }` y un estilo de enlace o
   botón con color de foco visible.
+
 - JavaScript añadirá comportamiento que HTML no cubre por sí solo. Ejemplo
   concreto: escuchar el evento `submit`, mostrar un resumen accesible de la
   reserva y actualizar dinámicamente el costo según el tipo de bicicleta, el
-  plan y la cantidad. No se agregó JavaScript porque el formulario actual
-  funciona con validación HTML nativa.
+  plan y la cantidad. No se agregó JavaScript todavia por que esta en construcción desde cero de estructura,
+  pero el formulario actual funciona con validación HTML nativa.
 
-4. Comunicación HTTP local
+3. Comunicación HTTP local
 
 Para probar códigos HTTP se debe servir la carpeta Reto1 con un servidor local
 en el puerto 8000. Los resultados registrados son:
@@ -54,9 +50,9 @@ La apertura directa mediante `file:///C:/Users/Paola/proyects_RIWI/Reto1/...`
 usa el protocolo `file`, no tiene host ni puerto HTTP y por eso no permite
 registrar códigos HTTP 200 o 404.
 
-5. Estructura y contenido
+4. Estructura y contenido
 
-5.0 Esquema de regiones
+4.0 Esquema de regiones
 
 Cada página sigue esta estructura semántica:
 
@@ -74,7 +70,7 @@ ubicación y contacto. En tarifas.html contiene las tablas y la información
 complementaria. En reservas.html contiene el contacto, el horario y el
 formulario dividido en los `fieldset` de datos, alquiler y confirmación.
 
-5.1 DAY1.html
+4.1 DAY1.html
 
 - Encabezado con el nombre del sitio y menú de navegación.
 - Enlaces a las páginas de tarifas y reservas.
@@ -83,7 +79,7 @@ formulario dividido en los `fieldset` de datos, alquiler y confirmación.
 - Imágenes de la carpeta img y un mapa incrustado.
 - Pie de página con la información de Rueda Libre.
 
-5.2 paginas/tarifas.html
+4.2 paginas/tarifas.html
 
 - Menú con enlaces al inicio y a reservas.
 - Tabla de tarifas para bicicletas urbana, montaña y eléctrica.
@@ -91,7 +87,7 @@ formulario dividido en los `fieldset` de datos, alquiler y confirmación.
 - Información sobre elementos recomendados para llevar.
 - Enlace para realizar una reserva.
 
-5.3 paginas/reservas.html
+4.3 paginas/reservas.html
 
 - Datos del cliente: nombre, documento, correo y celular.
 - Datos del alquiler: fecha, tipo de bicicleta, plan, cantidad y recorrido
@@ -100,7 +96,7 @@ formulario dividido en los `fieldset` de datos, alquiler y confirmación.
 - Botón para enviar la reserva.
 - Correo de contacto y horario de atención.
 
-6. Tabla de rutas relativas
+5. Tabla de rutas relativas
 
 
 +---------------------------+---------------------------+-------------------------+----------+
@@ -125,7 +121,7 @@ Las rutas se calculan desde la carpeta del archivo que contiene el enlace.
 `../` sube desde paginas hasta Reto1, mientras que una ruta sin `../` busca
 el recurso en la misma carpeta.
 
-7. Semántica HTML: auditoría, hallazgos y correcciones
+6. Semántica HTML: auditoría, hallazgos y correcciones
 
 No había etiquetas `div` ni `span` en los tres HTML. Por tanto, no fue
 necesario conservar ninguna de ellas ni justificar su permanencia.
@@ -154,7 +150,7 @@ REGISTRO DE HALLAZGOS Y CORRECCIONES
 | Enlaces abiertos en otra pestaña no tenían siempre una relación de seguridad.        | Se agregó rel="noopener noreferrer" a los enlaces con target="_blank".               |
 +--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 
-8. Justificación de controles
+7. Justificación de controles
 
 - Nombre completo: `text`, porque recibe texto; es obligatorio y tiene mínimo
   3 caracteres.
@@ -170,8 +166,7 @@ REGISTRO DE HALLAZGOS Y CORRECCIONES
 - Comentarios: `textarea`, porque permite texto libre y es opcional.
 - Políticas: `checkbox` obligatorio, porque registra una aceptación explícita.
 
-9. Tabla de pruebas de validación
-
+8. Tabla de pruebas de validación
 Cada prueba se plantea con los demás campos válidos y se intenta enviar el
 formulario.
 
@@ -195,7 +190,7 @@ TABLA DE PRUEBAS DE VALIDACIÓN DEL FORMULARIO
 | Recorrido guiado   | Opción inicial vacía   | Rechazar por no seleccionar recorrido.       | Bloqueado por required.              |
 | Políticas          | Casilla sin marcar     | Rechazar por no aceptar políticas.           | Bloqueado por required.              |
 +--------------------+------------------------+----------------------------------------------+--------------------------------------+
-10. Auditoría de accesibilidad
+9. Auditoría de accesibilidad
 
 - Todos los documentos tienen `lang="es"`, `charset` y `viewport`.
 - Los encabezados siguen una jerarquía de página, secciones y artículos.
@@ -211,7 +206,7 @@ TABLA DE PRUEBAS DE VALIDACIÓN DEL FORMULARIO
 - Pendiente para una futura hoja CSS: conservar foco visible, no depender solo
   del color y adaptar tablas e imágenes a pantallas pequeñas.
 
-11. Mapa de uso de color y contraste
+10. Mapa de uso de color y contraste
 
 +------------------+----------+---------------------------------------------+
 | Color            | Código   | Uso propuesto                               |
@@ -224,7 +219,7 @@ TABLA DE PRUEBAS DE VALIDACIÓN DEL FORMULARIO
 | Gris Asfalto     | #5E5E5D  | Texto secundario sobre fondos claros.     |
 +------------------+----------+---------------------------------------------+
 
-2. CLASIFICACIÓN DE COMBINACIONES DE COLOR
+11. CLASIFICACIÓN DE COMBINACIONES DE COLOR
 
 Criterio WCAG AA:
 - Texto normal: contraste mínimo de 4.5:1.
@@ -244,7 +239,7 @@ Criterio WCAG AA:
 | Blanco sobre Azul Noche        | 14.84:1              | Apta para texto normal     | Texto blanco sobre fondo azul oscuro.     |
 +--------------------------------+----------------------+----------------------------+-------------------------------------------+
 
-3. MAPA DE USO DE COLOR ELEGIDO
+12. MAPA DE USO DE COLOR ELEGIDO
 
 Las combinaciones que más me gustan por el momento son Azul Noche con
 Crema y Azul Noche con Blanco. Se propone aplicarlas así:
@@ -270,7 +265,7 @@ Blanco sobre Naranja Pedal y Naranja Pedal sobre Crema no alcanzan el mínimo
 de 3:1 para texto grande, por lo que no se usarán para texto. El naranja se
 reservará para acentos visuales o se combinará con texto Azul Noche.
 
-4. PALETA PROPUESTA POR EL CLIENTE
+13. PALETA PROPUESTA POR EL CLIENTE
 
 El cliente propuso los siguientes códigos.
 
@@ -283,7 +278,7 @@ El cliente propuso los siguientes códigos.
 | Crema            | #FAF6EF| Fondo general                        |
 | Gris Asfalto     | #5B6470| Texto secundario                     |
 +------------------+----------+--------------------------------------+
-12. Resumen de cambios
+14. Resumen de cambios
 
 Se actualizaron DAY1.html, paginas/reservas.html y paginas/tarifas.html para
 corregir semántica, asociación de controles, envío del formulario, encabezados
@@ -400,7 +395,7 @@ PRUEBAS RESPONSIVE DE LA FLOTA
 Ancho de pantalla | Columnas observadas
 1280 px           | [3 columnas de las tarjetas]
 900 px            | [2 columnas de las tarjetas]
-500 px            |[1 columnas de las tarjetas]
+500 px            | [1 columnas de las tarjetas]
 
 Conclusión:
 Se comprobó cómo se reorganizan las tarjetas de bicicletas
@@ -548,3 +543,29 @@ En esta versión logré reducir 134 líneas y trabajar en menos tiempo.
 También aprendí que CSS sigue siendo importante para personalizar
 la apariencia de la página. Combinar ambas herramientas permite
 obtener un código más organizado y adaptable a diferentes dispositivos.
+
+RESUMEN DE ACTIVIDADES:
+
+Durante esta semana trabajé en la mejora de la página
+web Rueda Libre utilizando Bootstrap 5.
+
+Aprendí a organizar el contenido mediante filas y
+columnas, crear tarjetas para mostrar las bicicletas,
+implementar un carrusel de promociones y personalizar
+los botones.
+
+También agregué iconos de Bootstrap, mejoré el menú
+de navegación y adapté las páginas para diferentes
+tamaños de pantalla(que fue lo más maluco.con Bootstrap me ahorre un montón de tiempo).
+
+Finalmente, realicé pruebas de visualización en
+celulares, tabletas y computadores, navegación con
+teclado y revisión del contraste de colores.
+
+CONCLUSIÓN:
+
+Esta semana aprendí a utilizar Bootstrap para
+organizar y mejorar la presentación de una página
+web. Comprendí cómo combinar sus herramientas con
+CSS para personalizar el diseño y adaptar el sitio
+a diferentes dispositivos. css es poderoso pero BOOSTRAP te automatiza tiempo.
