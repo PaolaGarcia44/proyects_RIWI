@@ -590,3 +590,12 @@ mientras que Tailwind es utility-first,permite construir los estilos combinando 
 clases según lo que se necesita.
 También aprendí que en Tailwind el orden de las clases dentro de class no cambia el resultado visual,
  mientras que mantenerlas organizadas facilita la lectura del código en Bootstrap.
+
+ CLASES QUE USO EN INDEX.HTML DEL OUTPUT.CSS
+
+pude observar que hay varias cosas que netamente no lo nombre pero automaticamente se trae en el 
+archivo de OUTPUT, ya que se trae de configuración o son necesarios para el funcionamiento del proyecto.
+esas cosas son:
+
+como @layer, variables CSS, @property y reglas para los elementos HTML
+Estilos de reinicio (Preflight), que modifican los estilos predeterminados del navegador.
