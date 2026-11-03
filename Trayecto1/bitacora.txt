@@ -569,3 +569,24 @@ organizar y mejorar la presentación de una página
 web. Comprendí cómo combinar sus herramientas con
 CSS para personalizar el diseño y adaptar el sitio
 a diferentes dispositivos. css es poderoso pero BOOSTRAP te automatiza tiempo.
+
+CONSTRUCCIÓN DE BOTÓN CON BOOSTRAP VS TAILWIND
+
+Bootstrap (Semana 2):
+
+Construí el botón utilizando las clases que ofrece Bootstrap,
+ como btn y btn-primary, que permiten darle apariencia y estilos de manera rápida mediante 
+ componentes ya definidos.
+
+Tailwind (Hoy):
+
+Construí el botón utilizando clases individuales como bg-gray-900, 
+text-white, rounded-lg, px-4, py-2 y hover:bg-green-700. Esto me permitió personalizar el color,
+el tamaño, los bordes y el comportamiento del botón.
+
+
+Bootstrap es un framework basado en componentes que ya vienen diseñados,
+mientras que Tailwind es utility-first,permite construir los estilos combinando pequeñas
+clases según lo que se necesita.
+También aprendí que en Tailwind el orden de las clases dentro de class no cambia el resultado visual,
+ mientras que mantenerlas organizadas facilita la lectura del código en Bootstrap.
