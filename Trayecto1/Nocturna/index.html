@@ -4,68 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototipo</title>
+    <title>tours|Nocturnos</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <section>
-        <div class="bg-gray-500 p-4">
-            <span class="text-2xl font-bold text-center mb-3 bg-gray inline-block">Nuevo · Jueves a sábado.</span>
+        <div class="bg-[#317F43] p-4">
+            <span class=" font-bold bg-[#317F43] text-center flex justify-center text-[#ffff]">Nuevo · Jueves a sábado.</span>
         </div>
 
-        <div class="bg-black p-4 text-white">
-            <h1 class="text-4xl font-bold text-center mb-3 bg-black">Rueda Nocturna</h1>
+        <div class="bg-[#EC7C26] p-4 text-black space-y-4">
+            <h1 class="text-4xl font-bold text-center mb-3 bg-[#EC7C26] ">Rueda Nocturna</h1>
         </div>
-        <div class="bg-blue-500 p-4 text-center">
-            <p class="text-lg text-center mb-3 bg-blue-500">Descubre Medellín en bici cuando se encienden las luces.</p>
-            <p class="text-lg text-center mb-3 bg-blue-500">3 rutas</p>
-            <p class="text-lg text-center mb-3 bg-blue-500"> Desde $55.000</p>
+        <div class="p-4 text-center bg-[#FFFDD0]">
+            <p class="text-lg text-center mb-3  bg-[#FFFDD0] text-black">Descubre Medellín en bici cuando se encienden las
+                luces.</p>
+            <p class="text-lg text-center mb-3 bg-[#FFFDD0] text-black">3 rutas</p>
+            <p class=" text-lg text-center mb-3 bg-[#FFFDD0] text-black"> Desde $55.000</p>
             <a href="#"
-                class="text-lg mb-3 bg-gray-900 text-white rounded-lg font-bold hover:bg-green-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 px-4 py-2 inline-block">
+                class="text-lg mb-3 bg-[#EC7C26] text-white rounded-lg font-bold hover:bg-green-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 px-4 py-2 inline-block">
                 Inscríbete</a>
             <a href="#"
-                class="text-lg mb-3 bg-blue-900 text-white rounded-lg font-bold hover:bg-blue-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 px-4 py-2 inline-block">
+                class="text-lg mb-3 bg-[#317F43] text-white rounded-lg font-bold hover:bg-blue-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 px-4 py-2 inline-block">
                 Ver rutas</a>
             <a href="#"
                 class="text-lg mb-3 bg-gray-200 text-gray-900 rounded-lg font-bold hover:bg-gray-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 px-4 py-2 inline-block">
                 Más información</a>
+        </div>
     </section>
-    <section>
-        <h2 class=" text-3xl p-3 font bold text-center mb-3 ">rutas</h2>
+    <section class="bg-[#FFFDD0] ">
+        <h2 class=" text-3xl p-3 font-bold text-center mb-3 text-white bg-gray-700">rutas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div class="shadow-x ">
+            <div class="col ">
+                <article class="text-center text-black mb-4 px-4 bg-white grid rounded-xl border-2 shadow-md
+            hover:border-orange-500 hover:shadow-xl
+            hover:bg-orange-200
+            transition-all duration-300 cursor-pointer">
+                    <img src="/Trayecto1/img/luces.jpg" class="h-52 w-full object-cover rounded-xl" 
+                        height="220" alt="Ruta de ciclismo">
+                        <span class="bg-green-500  rounded-full px-3 py-1 text-sm font-bold">NIVEL: Fácil</span>
+                    <h3 class="text-2xl font-bold my-4">RUTA: Luces del centro</h3>
+                    <p class="text-sm text-gray-500">DISTANCIA:</p>
+                    <p class="text-xl font-bold text-gray-900">10km</p>
+                    <p class="text-sm text-gray-500">DURACIÓN:</p>
+                    <p class="text-xl font-bold text-gray-900">2h</p>
+                     <p class="text-sm text-gray-500">PUNTO DE ENCUENTRO:</p>
+                    <p class="text-xl font-bold text-gray-900">Parque principal</p>
+                    
+                    <h4 class="text-4xl font-bold text-cyan-900 my-4">PRECIO:$55.000</h4>
+                    <button class="bg-cyan-500 shadow-lg shadow-cyan-900/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">reservar</button>
+                </article>
+            </div>
+        </div>
+        <div class="shadow-xl">
+            <div class="col">
+                <article class="text-center  mb-4 px-4 bg-gray-900 text-black grid rounded-xl bg-white border-2 shadow-md
+            hover:border-orange-500 hover:shadow-xl
+            hover:bg-orange-200
+            transition-all duration-300 cursor-pointer">
+                    <img src="/Trayecto1/img/mirador_ciudad.jpg" class="h-52 w-full object-cover rounded-xl"
+                        height="220" alt="Ruta de mirador">
+                        <span class="bg-yellow-500 text-white rounded-full px-3 py-2 text-sm font-bold">NIVEL: Medio</span>
+                    <h3 class="text-2xl font-bold my-4">RUTA: Miradores de la ciudad</h3>
+                    <p class="text-sm text-gray-500">DISTANCIA:</p>
+                    <p class="text-xl font-bold text-gray-900">16km</p>
+                    <p class="text-sm text-gray-500">DURACIÓN:</p>
+                    <p class="text-xl font-bold text-gray-900">3h</p>
+                    <p class="text-sm text-gray-500">PUNTO DE ENCUENTRO:</p>
+                    <p class="text-xl font-bold text-gray-900">Estación San Diego</p>
+                    <h4 class="text-3xl font-bold text-cyan-900 my-4">PRECIO: $75.000</h4>
 
-        <div class="col">
-            <article class="text-center border mb-4 px-4">
-                <img src="img/luces.jpg" class="card-img-top w-100 object-fit-cover" height="220" alt="Ruta de ciclismo">
-                <h3>RUTA: Luces del centro</h3>
-                <h4>DISTANCIA:10km</h4>
-                <h4>DURACIÓN: 2h</h4>
-                <h4>NIVEL: Fácil</h4>
-                <h4>PRECIO: $55.000</h4>
-            </article>
+
+                    
+                    <button class="bg-cyan-500 shadow-lg shadow-cyan-500/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">reservar</button>
+                </article>
+            </div>
         </div>
-        <div class="col">
-            <article class="text-center border mb-4">
-                 <img src="Trayecto1/img/mirador_ciudad.jpg" class="card-img-top w-100 object-fit-cover" height="220" alt="Ruta de mirador">
-                <h3>RUTA: Miradores de la ciudad</h3>
-                <h4>DISTANCIA:16km</h4>
-                <h4>DURACIÓN: 3h</h4>
-                <h4>NIVEL: Medio</h4>
-                <h4>PRECIO: $75.000</h4>
-            </article>
+        <div class="shadow-xl">
+            <div class="col">
+                <article class="text-center  mb-4 px-4 bg-gray-900 text-black grid rounded-xl bg-white border-2 shadow-md
+            hover:border-orange-500 hover:shadow-xl
+            hover:bg-orange-200
+            transition-all duration-300 cursor-pointer">
+                    <img src="/Trayecto1/img/lunapalmas.jpg" class="h-52 w-full object-cover rounded-xl" height="220"
+                        alt="luna en las palmas">
+                        <span class="bg-red-500 text-white rounded-full px-3 py-1 text-sm font-bold">NIVEL: Difícil</span>
+                    <h3 class="text-2xl font-bold my-4">RUTA: Luna en las palmas</h3>
+                    <p class="text-sm text-gray-500">DISTANCIA:</p>
+                    <p class="text-xl font-bold text-gray-900">22km</p>
+                    <p class="text-sm text-gray-500">DURACIÓN:</p>
+                    <p class="text-xl font-bold text-gray-900">3,5h</p>
+                     <p class="text-sm text-gray-500">PUNTO DE ENCUENTRO:</p>
+                    <p class="text-xl font-bold text-gray-900">Estación San Diego</p>
+
+                    <h4 class="text-3xl font-bold text-cyan-900 my-4">PRECIO: $95.000</h4>
+                    <button class="bg-cyan-500 shadow-lg shadow-cyan-500/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">reservar</button>
+                </article>
+            </div>
         </div>
-        <div class="col">
-            <article class="text-center border mb-4">
-                    <img src="Trayecto1/img/lunapalmas.jpg" class="card-img-top w-100 object-fit-cover" height="220" alt="luna en las palmas">
-                <h3>RUTA: Luna en las palmas</h3>
-                <h4>DISTANCIA:22km</h4>
-                <h4>DURACIÓN: 3,5h</h4>
-                <h4>NIVEL: Difícil</h4>
-                <h4>PRECIO: $95.000</h4>
-            </article>
+        </div>
         </div>
     </section>
-    </div>
 </body>
 
 </html>
