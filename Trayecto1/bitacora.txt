@@ -599,3 +599,22 @@ esas cosas son:
 
 como @layer, variables CSS, @property y reglas para los elementos HTML
 Estilos de reinicio (Preflight), que modifican los estilos predeterminados del navegador.
+
+--------------------------------------------------------------------------------------------------------------
+REGLAS DEL KIT
+
+Durante la experimentación con Tailwind.css pude aplicar varios tipos de radios de bordes,escala de espaciados,y mismo 
+color en los componentes, realmente la ejecución de este punto era muy similar al anterior de CARDS DE RUTAS NOCTURNAS
+y se usa como plantilla para la realización de este punto. solo cambia el tema del formulario, y los recuadros de las 
+alertas.
+
+son las siguientes:
+
+TIPOS DE BORDES       | COLORES                           | TIPOS DE ESPACIADOS | TIPOS DE MARGEN | SEPARACIONES
+----------------------|---------------------------------- |---------------------|-----------------|-------------
+rounded-full          | #FFFDD0                         | p-3                 | mb-3            | gap-5
+rounded-lg            | #EC7C26                         | p-4                 | mb-4            | gap-6
+rounded-xl            | #317F43                         | p-5                 | mt-2            | space-y-4
+                      | #FFFFFF                         | p-6                 | my-4            |
+                      | bg-gray-900                       | px-3                |                 |
+                      | Otros subtonos de la misma paleta | px-4                |                 | 
