@@ -1,0 +1,61 @@
+# Retos de clase · Sesión 1
+
+**Clan:** ubuntu 
+
+## Reto 1: ordenar tres tarjetas
+
+**Pasos:**
+1. Compara la tarjeta 1 con la 2. Si la 1 es mayor, cámbialas.
+2. Compara la tarjeta 2 con la 3. Si la 2 es mayor, cámbialas.
+3. Compara otra vez la 1 con la 2. Si la 1 es mayor, cámbialas.
+
+**Prueba 7, 2, 5:** queda 2, 5, 7 
+**Prueba 2, 2, 9:** no cambia nada y queda 2, 2, 9 
+
+**Cierre:**
+- Entrada: las tres tarjetas.
+- Pasos: las comparaciones y los cambios.
+- Con números repetidos hubo que decidir qué hacer cuando son iguales: no se cambian.
+
+## Reto 2: mensajes deseados y no deseados
+
+**Pistas de mensajes no deseados:** prometen premios, meten prisa, piden hacer clic o piden la clave.
+**Pistas de mensajes deseados:** hablan de la clase o del trabajo y no piden nada raro.
+
+- **Mensaje A (taller gratuito de Riwi):** deseado. Viene de un correo oficial y no pide datos.
+- **Mensaje B (contraseña que caduca):** no deseado. Mete prisa y pide la clave en un enlace desconocido.
+
+**Qué aprendimos:** con pocos ejemplos es fácil equivocarse. Si usamos la regla "si ofrece algo, es no deseado", fallamos con el mensaje A. Por eso a veces una persona debe revisar.
+
+## Reto 3: nuestro asistente
+
+**Para quién:** estudiantes que están aprendiendo lógica de programación.
+**Qué hace:** resuelve dudas básicas sobre condicionales usando el material del curso.
+
+**Recorrido de una pregunta:**
+1. La persona escribe su pregunta. Si está vacía, se le pide que la escriba. **(R)**
+2. Se revisa que sea del tema. Si no, se muestra el límite. **(R)**
+3. Se busca la información en el material del curso. **(R)**
+4. El modelo escribe una explicación sencilla con esa información. **(M)**
+5. Si la respuesta es dudosa, la revisa un facilitador. **(H)**
+6. Se muestra la respuesta junto con el mensaje de límite. **(R)**
+
+*R = regla, M = modelo, H = revisión humana*
+
+
+## Reto 4: prueba cruzada
+
+| Pregunta de prueba | Qué debería pasar |
+|---|---|
+| Algo fuera del tema (por ejemplo, fútbol) | Muestra el mensaje de límite |
+| Algo que el material no explica | No inventa y pasa a revisión humana |
+
+**Sugerencia que recibimos:** ______
+**Sugerencia que dimos:** ______
+
+## Cierre
+
+**Nuestro asistente ayuda a** resolver dudas básicas de lógica de programación con el material del curso, **pero todavía no debe** responder temas fuera del material ni inventar información.
+
+**¿Si usa un modelo de IA, deja de usar algoritmos?**
+No. El modelo y todo el sistema siguen funcionando con pasos y reglas; solo cambia que algunas decisiones vienen de patrones aprendidos.
