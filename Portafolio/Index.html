@@ -1,99 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portafolio | Paola</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow animate__animated animate__fadeInDown">
 		<div class="container">
-			<a class="navbar-brand fw-bold" href="#inicio">Paola</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+				aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="menu">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-					<li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-				</ul>
+				<div class="navbar-nav ms-auto gap-2 py-2">
+					<a class="btn btn-outline-light rounded-pill px-4" href="#sobre-mi">Sobre mí</a>
+					<a class="btn btn-outline-light rounded-pill px-4" href="#proyectos">Proyectos</a>
+					<a class="btn btn-outline-light  rounded-pill px-4" href="#contacto">Contacto</a>
+				</div>
 			</div>
 		</div>
 	</nav>
 
+	</div>
+	</nav>
+
 	<main>
-		<section id="inicio" class="py-5 text-center bg-light">
+		<section id="inicio" class="py-5 text-center bg-dark text-white">
 			<div class="container py-5">
-				<p class="text-primary fw-bold">¡Hola! Soy Paola</p>
-				<h1 class="display-4 fw-bold">Desarrolladora web</h1>
-				<p class="lead text-secondary">Creo sitios web sencillos, funcionales y atractivos.</p>
-				<a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+				<p class="text-success fw-bold animate__animated animate__fadeInUp">¡Hola! Soy Paola García</p>
+				<h1 class="display-4 fw-bold animate__animated animate__fadeInUp">Estudiante de desarrollo web</h1>
+				<p
+					class="lead text-secondary display-4 fw-bold lead animate__animated animate__fadeIn animate__delay-1s">
+					Aprendiendo paso a paso en Riwi.</p>
+				<a href="#proyectos" class="btn btn-primary animate__animated animate__fadeIn animate__delay-2s">Ver
+					proyectos</a>
 			</div>
 		</section>
 
 		<section id="sobre-mi" class="py-5">
-			<div class="container text-center">
+			<div class="container text-center rounded-3 shadow-lg p-5">
 				<h2>Sobre mí</h2>
 				<p class="text-secondary mx-auto" style="max-width: 650px;">
-					Me apasiona aprender y convertir ideas en experiencias digitales usando HTML, CSS y JavaScript.
+					Estoy estudiando Desarrollo de Software en Riwi. Aquí guardo lo que voy aprendiendo.
 				</p>
 				<span class="badge text-bg-primary m-1">HTML</span>
 				<span class="badge text-bg-dark m-1">CSS</span>
 				<span class="badge text-bg-warning m-1">JavaScript</span>
 				<span class="badge text-bg-info m-1">Bootstrap</span>
+				<span class="badge text-bg-secondary m-1">Git</span>
 			</div>
 		</section>
-
 		<section id="proyectos" class="py-5 bg-light">
 			<div class="container">
 				<h2 class="text-center mb-4">Mis proyectos</h2>
-				<div class="row g-4">
-					<div class="col-md-4">
-						<article class="card h-100 shadow-sm">
-							<div class="card-body">
-								<h3 class="h5">Página de inicio</h3>
-								<p class="text-secondary">Landing page responsive para presentar un servicio.</p>
-								<a href="#contacto" class="btn btn-outline-primary btn-sm">Ver más</a>
+				<div class="row g-4 justify-content-center">
+
+					<div class="col-md-4" data-aos="fade-up">
+						<article class="card h-100 border-0 shadow rounded-4 text-center">
+							<div class="card-body p-4">
+								<h3 class="h5 fw-bold">Página de Rueda Libre TRAYECTO 1</h3>
+								<p class="text-secondary">Mi primera página con HTML y CSS, durante el proceso se
+									utilizó frameworks como Bootstrap y Tailwind CSS.</p>
+								<a href="https://github.com/PaolaGarcia44/proyects_RIWI/tree/main/Trayecto1"
+									class="btn btn-success rounded-pill px-4">Ver más</a>
 							</div>
 						</article>
 					</div>
-					<div class="col-md-4">
-						<article class="card h-100 shadow-sm">
-							<div class="card-body">
-								<h3 class="h5">Lista de tareas</h3>
-								<p class="text-secondary">Aplicación sencilla para organizar actividades diarias.</p>
-								<a href="#contacto" class="btn btn-outline-primary btn-sm">Ver más</a>
+
+					<div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+						<article class="card h-100 border-0 shadow rounded-4 text-center">
+							<div class="card-body p-4">
+								<h3 class="h5 fw-bold">Algoritmia 1</h3>
+								<p class="text-secondary">Ejercicios de algoritmia con PSeInt, documentación y código.
+								</p>
+								<a href="https://github.com/PaolaGarcia44/proyects_RIWI/tree/main/Algoritmia%201"
+									class="btn btn-success rounded-pill px-4">Ver más</a>
 							</div>
 						</article>
 					</div>
-					<div class="col-md-4">
-						<article class="card h-100 shadow-sm">
-							<div class="card-body">
-								<h3 class="h5">Portafolio personal</h3>
-								<p class="text-secondary">Diseño limpio para mostrar habilidades y proyectos.</p>
-								<a href="#contacto" class="btn btn-outline-primary btn-sm">Ver más</a>
+
+					<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+						<article class="card h-100 border-0 shadow rounded-4 text-center">
+							<div class="card-body p-4">
+								<h3 class="h5 fw-bold">IA Generativa</h3>
+								<p class="text-secondary">Prompts para generar contenido con inteligencia artificial.
+								</p>
+								<a href="https://github.com/PaolaGarcia44/proyects_RIWI/tree/main/IAGENERATIVA"
+									class="btn btn-success rounded-pill px-4">Ver más</a>
 							</div>
 						</article>
 					</div>
+
 				</div>
 			</div>
 		</section>
 
+
 		<section id="contacto" class="py-5 text-center">
 			<div class="container">
 				<h2>Contacto</h2>
-				<p class="text-secondary">¿Tienes una idea? Escríbeme.</p>
-				<a href="mailto:paola@example.com" class="btn btn-primary">paola@example.com</a>
+				<p class="text-secondary">Puedes encontrarme aquí:</p>
+				<a href="https://github.com/PaolaGarcia44" class="btn btn-dark">
+					<i class="fa-brands fa-github"></i> GitHub
+				</a>
+				<a href="https://www.linkedin.com/in/paola-andrea-garcia-tangarife-338627186" class="btn btn-primary">
+					<i class="fa-brands fa-linkedin"></i> LinkedIn
+				</a>
+				<a href="https://portafoliopaolag.web.app" class="btn btn-primary">
+					<i class="fa-solid fa-briefcase"></i> Portafolio Personal
+				</a>
 			</div>
 		</section>
 	</main>
 
 	<footer class="bg-dark text-white text-center py-3">
-		<small>&copy; 2026 Paola. Todos los derechos reservados.</small>
+		<small>&copy; 2026 Paola. Hecho con cariño en Riwi.</small>
 	</footer>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<a href="#inicio" class="btn btn-success rounded-circle btn-subir" aria-label="Subir">
+		<svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor">
+			<path d="M8 3 L14 12 H2 Z" />
+		</svg>
+	</a>
+
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<script>
+		AOS.init({ duration: 800, once: true });
+	</script>
 </body>
+
 </html>
