@@ -1,0 +1,39 @@
+name: Publicar dos ramas
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: sitio/main
+
+      - uses: actions/checkout@v4
+        with:
+          ref: Portafolio
+          path: sitio/Portafolio
+
+      - run: rm -rf sitio/main/.git sitio/Portafolio/.git
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: sitio
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
