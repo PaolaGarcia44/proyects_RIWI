@@ -38,11 +38,63 @@ jobs:
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Mis proyectos</title>
+            <style>
+              * { box-sizing: border-box; margin: 0; padding: 0; }
+              body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                padding: 24px;
+                font-family: "Segoe UI", Arial, sans-serif;
+                background: linear-gradient(135deg, #1e1b4b, #4c1d95, #be185d);
+                color: #fff;
+              }
+              h1 { font-size: 2.4rem; text-align: center; }
+              p.sub { opacity: 0.8; text-align: center; margin-top: -20px; }
+              .tarjetas {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                justify-content: center;
+              }
+              a.tarjeta {
+                width: 260px;
+                padding: 32px 24px;
+                border-radius: 20px;
+                background: rgba(255, 255, 255, 0.12);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+                transition: transform 0.2s, background 0.2s;
+              }
+              a.tarjeta:hover {
+                transform: translateY(-6px);
+                background: rgba(255, 255, 255, 0.22);
+              }
+              a.tarjeta .icono { font-size: 2.5rem; }
+              a.tarjeta h2 { margin: 12px 0 6px; font-size: 1.4rem; }
+              a.tarjeta span { opacity: 0.8; font-size: 0.95rem; }
+            </style>
           </head>
           <body>
             <h1>Mis proyectos</h1>
-            <p><a href="main/">Rueda Libre</a></p>
-            <p><a href="Portafolio/">Portafolio</a></p>
+            <p class="sub">Elige cuál quieres ver</p>
+            <div class="tarjetas">
+              <a class="tarjeta" href="main/">
+                <div class="icono">🚀</div>
+                <h2>Rueda Libre</h2>
+                <span>Ejercicios y trayectos</span>
+              </a>
+              <a class="tarjeta" href="Portafolio/">
+                <div class="icono">🎨</div>
+                <h2>Portafolio</h2>
+                <span>Mi trabajo y mis datos</span>
+              </a>
+            </div>
           </body>
           </html>
           EOF
