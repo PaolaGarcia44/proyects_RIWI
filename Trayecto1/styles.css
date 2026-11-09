@@ -1,16 +1,25 @@
+
 /* =========================================
    1. VARIABLES Y CONFIGURACIÓN GENERAL
 ========================================= */
 
 :root {
 
-    /* Colores */
-    --color-blanco: #ffffff;
-    --color-verde-ruta: #317F43;
-    --color-azul-oscuro: #191970;
-    --color-crema: #FFFDD0;
-    --color-naranja-pedal: #EC7C26;
-    --color-verde-claro: #90EE90;
+    /* Paleta principal */
+    --scarlet-rush: #B56A55;
+    --turf-green: #536B78;
+    --willow-green: #E6DED3;
+    --lemon-chiffon: #F7F4EF;
+    --dark-coffee: #2F3A40;
+
+    /* Colores del sitio */
+    --color-blanco: #FFFFFF;
+    --color-verde-ruta: #536B78;
+    --color-azul-oscuro: #2F3A40;
+    --color-crema: #F7F4EF;
+    --color-naranja-pedal: #B56A55;
+    --color-verde-claro: #E6DED3;
+    --color-seccion: #FFFFFF;
 
     /* Fuentes */
     --fuente-titulos: 'Montserrat', Arial, sans-serif;
@@ -21,15 +30,14 @@
     --espacio-mediano: 1rem;
     --espacio-grande: 2rem;
 
-
-      /* Variables globales de Bootstrap 5.0.2 */
-    --bs-primary: #317F43;
-    --bs-primary-rgb: 49, 127, 67;
+    /* Variables globales de Bootstrap 5.0.2 */
+    --bs-primary: #536B78;
+    --bs-primary-rgb: 83, 107, 120;
 
     --bs-body-font-family: 'Open Sans', Arial, sans-serif;
 
-    --bs-link-color: #191970;
-    --bs-link-hover-color: #317F43;
+    --bs-link-color: #536B78;
+    --bs-link-hover-color: #B56A55;
 
     --bs-border-radius: 8px;
 }
@@ -50,27 +58,23 @@ img {
     height: auto;
 }
 
-
 section {
     margin: var(--espacio-grande) auto;
     padding: var(--espacio-grande);
-    background-color: var(--color-blanco);
-    border-radius: 5px;
+    background-color: var(--color-seccion);
+    border-radius: 8px;
     width: 100%;
 }
 
 aside {
-    background-color: var(--color-blanco);
-    border-radius: 5px;
-    
+    background-color: var(--color-seccion);
+    border-radius: 8px;
 }
-
 
 
 /* =========================================
    3. ENCABEZADO, LOGO Y PIE DE PÁGINA
 ========================================= */
-
 header,
 footer {
     background-color: var(--color-verde-ruta);
@@ -107,8 +111,14 @@ footer {
     font-size: 1rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
+    color: var(--color-blanco);
 }
 
+.barra-superior .navbar .nav-link:hover,
+.barra-superior .navbar .nav-link:focus,
+.barra-superior .navbar .nav-link.active {
+    color: #F0D8CB;
+}
 
 
 /* =========================================
@@ -122,6 +132,7 @@ h4,
 h5,
 h6 {
     font-family: var(--fuente-titulos);
+    color: var(--color-azul-oscuro);
 }
 
 h1 {
@@ -139,7 +150,10 @@ p a {
     text-decoration: none;
 }
 
-
+p a:hover {
+    color: var(--color-naranja-pedal);
+    text-decoration: underline;
+}
 
 .marca {
     display: flex;
@@ -158,51 +172,63 @@ p a {
    5. BOTONES
 ========================================= */
 
-/* Botón para reservar */
-
 .btn-primary {
     background-color: var(--color-verde-ruta);
     border-color: var(--color-verde-ruta);
     color: var(--color-blanco);
 }
+
 .btn-primary:hover {
-    background-color: #276638;
-    border-color: #276638;
+    background-color: #425762;
+    border-color: #425762;
     color: var(--color-blanco);
 }
 
 .btn-primary:active,
 .btn-primary.active {
-    background-color: #1F522D;
-    border-color: #1F522D;
+    background-color: #35474F;
+    border-color: #35474F;
     color: var(--color-blanco);
 }
 
 .btn-naranja {
     background-color: var(--color-naranja-pedal);
     border-color: var(--color-naranja-pedal);
-    color: white;
+    color: var(--color-blanco);
 }
 
 .btn-naranja:hover {
-    background-color: #E66D17;
-    border-color: #E66D17;
-    color: #191970;
+    background-color: #965541;
+    border-color: #965541;
+    color: var(--color-blanco);
 }
 
 .btn-naranja:active,
 .btn-naranja.active {
-    background-color: #D96512;
-    border-color: #D96512;
-    color: #191970;
+    background-color: #7D4535;
+    border-color: #7D4535;
+    color: var(--color-blanco);
 }
-
 
 
 /* =========================================
    6. SERVICIOS Y TARJETAS
 ========================================= */
 
+.card {
+    background-color: var(--color-blanco);
+    border: 1px solid #D9D2C9;
+    border-radius: 10px;
+    color: var(--color-azul-oscuro);
+}
+
+.card-title {
+    color: var(--color-verde-ruta);
+}
+
+.card-text {
+    color: var(--color-azul-oscuro);
+}
 
 .nuevo {
     position: absolute;
@@ -221,7 +247,6 @@ p a {
    7. IMÁGENES Y CONTENIDO MULTIMEDIA
 ========================================= */
 
-
 iframe {
     border: 10px solid var(--color-blanco);
     width: 100%;
@@ -235,44 +260,53 @@ iframe {
     object-fit: cover;
 }
 
-/* Mejorar la visibilidad del texto del carrusel */
+/* Visibilidad del texto del carrusel */
 #carouselExampleCaptions .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.70);
+    background-color: rgba(47, 58, 64, 0.88);
     border-radius: 12px;
     padding: 15px;
-    color: white;
+    color: var(--color-blanco);
 }
 
 #carouselExampleCaptions .carousel-caption h5 {
-    color: white;
+    color: var(--color-blanco);
     font-weight: bold;
 }
 
 #carouselExampleCaptions .carousel-caption p {
-    color: white;
+    color: var(--color-blanco);
 }
+
+#carouselExampleCaptions .carousel-indicators button {
+    background-color: var(--color-blanco);
+}
+
 
 /* =========================================
    8. TABLAS
 ========================================= */
-/* AJUSTES QUE TODAVÍA UTILIZA LA PÁGINA TARIFAS */
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin: var(--espacio-grande) auto;
-    border: 3px solid var(--color-verde-ruta);
+    border: 2px solid var(--color-verde-ruta);
     border-radius: 10px;
     text-align: center;
+    background-color: var(--color-blanco);
 }
 
 th,
 td {
     padding: 0.75rem;
-    border: 1px solid var(--color-verde-ruta);
+    border: 1px solid #D5CEC5;
     text-align: left;
 }
 
+th {
+    background-color: var(--color-verde-ruta);
+    color: var(--color-blanco);
+}
 
 
 /* =========================================
@@ -292,8 +326,8 @@ form {
 form label {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--color-azul-oscuro);
 }
-
 
 form button {
     padding: 1rem 2rem;
@@ -310,9 +344,9 @@ fieldset {
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid var(--color-naranja-pedal);
+    outline: 3px solid #B5A89A;
     outline-offset: 2px;
-    border-color: var(--color-azul-oscuro);
+    border-color: var(--color-verde-ruta);
 }
 
 
@@ -335,7 +369,14 @@ textarea:focus {
 
     border-radius: 50%;
     color: var(--color-blanco);
-    background-color: var(--color-verde-ruta);  
+    background-color: var(--color-verde-ruta);
+    border-color: var(--color-verde-ruta);
+}
+
+.whatsapp-fijo:hover {
+    color: var(--color-blanco);
+    background-color: #425762;
+    border-color: #425762;
 }
 
 .whatsapp-fijo i {
@@ -343,14 +384,12 @@ textarea:focus {
 }
 
 
-
 /* =========================================
-   11. PIE DE PAGINA
+   11. PIE DE PÁGINA Y SECCIONES
 ========================================= */
 
-
 .portada-personalizada {
-    background-color: var(--color-crema);
+    background-color: var(--color-verde-claro);
     color: var(--color-azul-oscuro);
     padding: 1rem;
     border-radius: 8px;
@@ -358,12 +397,12 @@ textarea:focus {
 }
 
 .titulo-seccion {
-    color: var(--color-azul-oscuro);
+    color: var(--color-verde-ruta);
     font-family: var(--fuente-titulos);
     font-weight: bold;
     text-align: center;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid var(--color-verde-ruta);
+    border-bottom: 3px solid var(--color-naranja-pedal);
     padding-bottom: 0.5rem;
 }
 
@@ -374,14 +413,26 @@ textarea:focus {
     text-align: center;
     border-top: 4px solid var(--color-naranja-pedal);
 }
+
+footer h2,
+footer p,
 footer a {
     color: var(--color-blanco);
+}
+
+footer a {
     text-decoration: underline;
 }
 
+footer a:hover {
+    color: #F0D8CB;
+}
 
 
-/* AJUSTES DE TABLAS PARA CELULARES */
+/* =========================================
+   12. AJUSTES DE TABLAS PARA CELULARES
+========================================= */
+
 @media (max-width: 600px) {
 
     table {
@@ -396,4 +447,3 @@ footer a {
         overflow-wrap: break-word;
     }
 }
-
