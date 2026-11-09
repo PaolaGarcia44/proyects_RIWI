@@ -27,8 +27,9 @@ jobs:
           ref: Portafolio
           path: sitio/Portafolio
 
-      - run: rm -rf sitio/main/.git sitio/Portafolio/.git
+      - run: rm -rf sitio/main/.git sitio/Portafolio/.git sitio/*/node_modules
       - run: cp sitio/main/index.html sitio/index.html
+      - run: du -sh sitio/*/* | sort -h | tail -10
 
       - uses: actions/configure-pages@v5
 
