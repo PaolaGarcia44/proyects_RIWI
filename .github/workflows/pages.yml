@@ -28,7 +28,25 @@ jobs:
           path: sitio/Portafolio
 
       - run: rm -rf sitio/main/.git sitio/Portafolio/.git sitio/*/node_modules
-      - run: cp sitio/main/index.html sitio/index.html
+
+      - name: Crear menú de inicio
+        run: |
+          cat > sitio/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mis proyectos</title>
+          </head>
+          <body>
+            <h1>Mis proyectos</h1>
+            <p><a href="main/">Rueda Libre</a></p>
+            <p><a href="Portafolio/">Portafolio</a></p>
+          </body>
+          </html>
+          EOF
+
       - run: du -sh sitio/*/* | sort -h | tail -10
 
       - uses: actions/configure-pages@v5
