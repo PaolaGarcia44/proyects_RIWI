@@ -19,3 +19,31 @@
   --font-titulo: "Montserrat", sans-serif;
   --font-texto: "Open Sans", sans-serif;
 }
+
+@layer components {
+
+  /* Botón principal */
+  .btn-principal {
+    @apply inline-flex items-center justify-center rounded-lg;
+    @apply px-6 py-3;
+    @apply font-semibold;
+    @apply bg-[#191970] text-[#FFFDD0] dark:bg-[#F5C542] dark:text-[#191970];
+    @apply transition-colors hover:bg-[#317F43] dark:hover:bg-[#FFFDD0];
+  }
+
+  .btn-secundario {
+    @apply inline-flex items-center justify-center rounded-lg border-2;
+    @apply px-6 py-3;
+    @apply font-semibold;
+    @apply border-[#317F43] text-[#317F43] dark:border-[#F5C542] dark:text-[#F5C542];
+    @apply transition-colors hover:bg-[#317F43] hover:text-white dark:hover:bg-[#F5C542] dark:hover:text-[#191970];
+  }
+
+  .btn-formulario {
+    @apply w-full rounded-lg;
+    @apply px-6 py-3;
+    @apply font-bold;
+    @apply bg-[#EC7C26] text-[#191970] dark:bg-[#0891B2] dark:text-white;
+    @apply transition-colors hover:bg-[#F5C542] dark:hover:bg-[#191970];
+  }
+}
