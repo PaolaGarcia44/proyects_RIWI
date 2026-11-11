@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda Nocturna</title>
+
+    <!-- CSS compilado de Tailwind -->
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-[#FFFDD0] text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- ENCABEZADO -->
+    <header id="inicio">
+
+        <nav class="navbar bg-oscuro text-crema dark:bg-gray-950 dark:text-white px-4 md:px-8 shadow-lg flex items-center justify-between">
+
+            <a href="#inicio"
+               class="text-xl md:text-2xl font-bold tracking-wide hover:text-white dark:hover:text-yellow-300 transition-colors">
+                RUEDA NOCTURNA
+            </a>
+
+            <!-- MENÚ DESKTOP -->
+            <div class="hidden md:flex items-center gap-4">
+                <ul class="menu menu-horizontal gap-2 px-1 font-semibold">
+                    <li>
+                        <a href="#rutas"
+                           class="rounded-lg hover:bg-terracota hover:text-gray-900 dark:hover:bg-orange-700 dark:hover:text-white">
+                            <i class="bi bi-bicycle"></i> Rutas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#alertas"
+                           class="rounded-lg hover:bg-terracota hover:text-gray-900 dark:hover:bg-orange-700 dark:hover:text-white">
+                            <i class="bi bi-bell-fill"></i> Alertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#formulario"
+                           class="rounded-lg hover:bg-terracota hover:text-gray-900 dark:hover:bg-orange-700 dark:hover:text-white">
+                            <i class="bi bi-envelope-fill"></i> Formulario
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#formulario"
+                   class="btn bg-[#EC7C26] text-gray-900 border-none hover:bg-orange-700 hover:text-white dark:bg-orange-700 dark:text-white dark:hover:bg-orange-800">
+                    Inscríbete
+                </a>
+            </div>
+
+            <!-- MENÚ MÓVIL -->
+            <a href="#formulario"
+               class="btn bg-[#EC7C26] text-gray-900 border-none hover:bg-orange-700 hover:text-white md:hidden dark:bg-orange-700 dark:text-white dark:hover:bg-orange-800">
+                Inscríbete
+            </a>
+
+        </nav>
+
+        <div class="bg-gray-700 text-white text-center font-bold py-1 dark:bg-gray-950 dark:text-gray-200">
+            Nuevo · Jueves a sábado
+        </div>
+
+        <div class="bg-[#EC7C26] text-center p-6 dark:bg-orange-700">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
+                Rueda Nocturna
+            </h1>
+        </div>
+
+        <div class="text-center p-6 space-y-2 bg-[#FFFDD0] text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+            <p class="text-lg">
+                Descubre Medellín en bici cuando se encienden las luces.
+            </p>
+
+            <p class="text-lg">
+                3 rutas · Desde $55.000
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-3 mt-4">
+                <a href="#formulario"
+                   class="btn bg-[#EC7C26] text-gray-900 border-none hover:bg-orange-700 hover:text-white dark:bg-orange-700 dark:text-white dark:hover:bg-orange-800">
+                    Inscríbete
+                </a>
+
+                <a href="#rutas"
+                   class="btn bg-[#317F43] text-white border-none hover:bg-green-800 dark:bg-green-700 dark:text-white dark:hover:bg-green-800">
+                    Ver rutas
+                </a>
+
+                <a href="#alertas"
+                   class="btn btn-outline text-gray-900 border-gray-700 hover:bg-gray-700 hover:text-white dark:text-white dark:border-gray-400 dark:hover:bg-gray-700">
+                    Más información
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="bg-[#FFFDD0] text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+        <!-- CÓMO FUNCIONA -->
+        <section id="como-funciona" class="p-4 md:p-8 lg:p-12">
+
+            <div class="max-w-5xl mx-auto px-4">
+
+                <h2 class="text-2xl md:text-3xl lg:text-4xl p-3 font-bold text-center mb-6 text-white bg-gray-700 dark:bg-gray-950 dark:text-gray-100">
+                    ¿Cómo funciona?
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+
+                    <article class="text-center p-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md">
+                        <p class="text-4xl font-bold text-orange-700 dark:text-orange-400">1</p>
+                        <h3 class="text-xl font-bold my-2">Elige tu ruta</h3>
+                        <p>Escoge la que más te guste.</p>
+                    </article>
+
+                    <article class="text-center p-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md">
+                        <p class="text-4xl font-bold text-orange-700 dark:text-orange-400">2</p>
+                        <h3 class="text-xl font-bold my-2">Reserva</h3>
+                        <p>Llena el formulario.</p>
+                    </article>
+
+                    <article class="text-center p-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md">
+                        <p class="text-4xl font-bold text-orange-700 dark:text-orange-400">3</p>
+                        <h3 class="text-xl font-bold my-2">Llega temprano</h3>
+                        <p>15 minutos antes de la salida.</p>
+                    </article>
+
+                    <article class="text-center p-4 bg-white text-gray-900 dark:bg-gray-800 dark:text-white rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md">
+                        <p class="text-4xl font-bold text-orange-700 dark:text-orange-400">4</p>
+                        <h3 class="text-xl font-bold my-2">Pedalea</h3>
+                        <p>Disfruta Medellín de noche.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RUTAS -->
+        <section id="rutas" class="p-4 md:p-8 lg:p-12">
+
+            <div class="max-w-5xl mx-auto px-4">
+
+                <h2 class="text-2xl md:text-3xl lg:text-4xl p-3 font-bold text-center mb-6 text-white bg-gray-700 dark:bg-gray-950 dark:text-gray-100">
+                    Rutas
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+
+                    <!-- RUTA 1 -->
+                    <article class="text-center text-gray-900 dark:text-white px-4 pb-4 bg-white dark:bg-gray-800 grid rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md hover:border-orange-700 dark:hover:border-orange-400 hover:shadow-xl hover:bg-orange-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+
+                        <img src="/Trayecto1/img/luces.jpg"
+                             class="h-52 w-full object-cover rounded-xl"
+                             height="220"
+                             alt="Ruta de ciclismo">
+
+                        <span class="bg-green-700 dark:bg-green-700 text-white rounded-full px-3 py-1 text-sm font-bold">
+                            NIVEL: Fácil
+                        </span>
+
+                        <h3 class="text-2xl font-bold my-4">RUTA: Luces del centro</h3>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DISTANCIA:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">10km</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DURACIÓN:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">2h</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">PUNTO DE ENCUENTRO:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">Parque principal</p>
+
+                        <h4 class="text-3xl font-bold text-cyan-900 dark:text-cyan-300 my-4">
+                            PRECIO: $55.000
+                        </h4>
+
+                        <button class="bg-cyan-700 dark:bg-cyan-700 text-white shadow-lg shadow-cyan-500/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">
+                            Reservar
+                        </button>
+                    </article>
+
+                    <!-- RUTA 2 -->
+                    <article class="text-center text-gray-900 dark:text-white px-4 pb-4 bg-white dark:bg-gray-800 grid rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md hover:border-orange-700 dark:hover:border-orange-400 hover:shadow-xl hover:bg-orange-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+
+                        <img src="/Trayecto1/img/mirador_ciudad.jpg"
+                             class="h-52 w-full object-cover rounded-xl"
+                             height="220"
+                             alt="Ruta de mirador">
+
+                        <span class="bg-yellow-800 dark:bg-yellow-800 text-white rounded-full px-3 py-1 text-sm font-bold">
+                            NIVEL: Medio
+                        </span>
+
+                        <h3 class="text-2xl font-bold my-4">RUTA: Miradores de la ciudad</h3>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DISTANCIA:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">16km</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DURACIÓN:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">3h</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">PUNTO DE ENCUENTRO:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">Estación San Diego</p>
+
+                        <h4 class="text-3xl font-bold text-cyan-900 dark:text-cyan-300 my-4">
+                            PRECIO: $75.000
+                        </h4>
+
+                        <button class="bg-cyan-700 dark:bg-cyan-700 text-white shadow-lg shadow-cyan-500/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">
+                            Reservar
+                        </button>
+                    </article>
+
+                    <!-- RUTA 3 -->
+                    <article class="text-center text-gray-900 dark:text-white px-4 pb-4 bg-white dark:bg-gray-800 grid rounded-xl border-2 border-gray-200 dark:border-gray-700 shadow-md hover:border-orange-700 dark:hover:border-orange-400 hover:shadow-xl hover:bg-orange-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+
+                        <img src="/Trayecto1/img/lunapalmas.jpg"
+                             class="h-52 w-full object-cover rounded-xl"
+                             height="220"
+                             alt="Luna en las palmas">
+
+                        <span class="bg-red-700 dark:bg-red-700 text-white rounded-full px-3 py-1 text-sm font-bold">
+                            NIVEL: Difícil
+                        </span>
+
+                        <h3 class="text-2xl font-bold my-4">RUTA: Luna en las palmas</h3>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DISTANCIA:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">22km</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">DURACIÓN:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">3,5h</p>
+
+                        <p class="text-sm text-gray-500 dark:text-gray-300">PUNTO DE ENCUENTRO:</p>
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">Estación San Diego</p>
+
+                        <h4 class="text-3xl font-bold text-cyan-900 dark:text-cyan-300 my-4">
+                            PRECIO: $95.000
+                        </h4>
+
+                        <button class="bg-cyan-700 dark:bg-cyan-700 text-white shadow-lg shadow-cyan-500/50 w-1/2 mx-auto rounded-full px-3 py-1 text-sm">
+                            Reservar
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ALERTAS -->
+        <section id="alertas" class="p-4 md:p-8 lg:p-12">
+
+            <div class="max-w-5xl mx-auto px-4 space-y-4">
+
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-white bg-gray-700 dark:bg-gray-950 dark:text-gray-100 p-3">
+                    Alertas
+                </h2>
+
+                <div role="alert"
+                     class="alert bg-blue-100 text-blue-900 border border-blue-300 dark:bg-blue-950 dark:text-blue-100 dark:border-blue-800">
+                    <span>Consulta los horarios disponibles para nuestras rutas.</span>
+                </div>
+
+                <div role="alert"
+                     class="alert bg-green-100 text-green-900 border border-green-300 dark:bg-green-950 dark:text-green-100 dark:border-green-800">
+                    <span>¡Reserva exitosa! Prepárate para pedalear.</span>
+                </div>
+
+                <div role="alert"
+                     class="alert bg-yellow-100 text-yellow-900 border border-yellow-300 dark:bg-yellow-950 dark:text-yellow-100 dark:border-yellow-800">
+                    <span>Recuerda llegar 15 minutos antes de la salida.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="formulario" class="p-4 md:p-8 lg:p-12 text-center">
+
+            <div class="max-w-5xl mx-auto px-4">
+
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                    Formulario
+                </h2>
+
+                <form class="card bg-white text-gray-900 dark:bg-gray-800 dark:text-white shadow-md max-w-md mx-auto p-6 space-y-4 border border-gray-200 dark:border-gray-700">
+
+                    <label class="form-control w-full">
+                        <span class="font-bold mb-1">Correo</span>
+
+                        <input type="email"
+                               placeholder="ejemplo@correo.com"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500">
+                    </label>
+
+                    <label class="form-control w-full">
+                        <span class="font-bold mb-1">Celular</span>
+
+                        <input type="tel"
+                               placeholder="3001234567"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500">
+                    </label>
+
+                    <button type="submit"
+                            class="btn bg-cyan-700 text-white border-none hover:bg-cyan-800 dark:bg-blue-700 dark:text-white dark:border-blue-700 dark:hover:bg-blue-800">
+                        Enviar
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-green-700 text-white p-8 dark:bg-gray-950 dark:text-gray-200">
+
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6 text-center">
+
+            <div class="flex-1">
+                <h2 class="font-bold text-xl">Rueda Libre</h2>
+                <p>Alquiler de bicicletas en Medellín</p>
+                <p>© 2026 Rueda Libre. ruedalibre.com</p>
+            </div>
+
+            <div class="flex-1">
+                <h2 class="font-bold text-xl">Contacto</h2>
+                <p>
+                    <a href="mailto:info@ruedalibre.com"
+                       class="link text-white dark:text-gray-200 dark:hover:text-orange-400">
+                        info@ruedalibre.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="flex-1">
+                <h2 class="font-bold text-xl">Horario</h2>
+                <p>Lunes a viernes: 7:00 a.m. - 7:00 p.m.</p>
+                <p>Sábados, domingos y festivos: 6:00 a.m. - 2:00 p.m.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

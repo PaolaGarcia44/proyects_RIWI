@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap");
 @import "tailwindcss";
 
 @plugin "daisyui";
@@ -5,11 +6,16 @@
 /* Detectar los archivos HTML del proyecto */
 @source "../";
 
-/* Paleta principal */
 @theme {
-    --color-terracota: #B56A55;
-    --color-verde: #536B78;
-    --color-crema: #F7F4EF;
-    --color-arena: #E6DED3;
-    --color-oscuro: #2F3A40;
+  /* Paleta principal */
+  --color-terracota: #B56A55;
+  --color-verde: #536B78;
+  --color-crema: #F7F4EF;
+  --color-arena: #E6DED3;
+  --color-oscuro: #2F3A40;
+  --color-amarillo-farol: #F2B84B;
+
+  /* Fuentes */
+  --font-titulo: "Montserrat", sans-serif;
+  --font-texto: "Open Sans", sans-serif;
 }
