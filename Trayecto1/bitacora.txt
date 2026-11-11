@@ -695,5 +695,93 @@ Campos de entrada             | input input-bordered w-full bg-white text-gray-9
 
 
 --------------------------------------------------------------------------------------------------------------------------
+Este es e resultado que salio en DEVTOOLS:
 Nocturna: 56kb
 libre css:  BOOSTRAP.min.css : 155.85kb
+
+COMPARATIVA: BOOTSTRAP VS TAILWIND
+
+| Criterio              | Bootstrap                         | Tailwind                         |
+|-----------------------|-----------------------------------|----------------------------------|
+| Curva de aprendizaje  | Más fácil al comenzar porque      | Al principio cuesta recordar     |
+|                       | tiene componentes listos.         | muchas clases pequeñas.          |
+|                       |                                   |     más engorrioso.              |
+------------------------------------------------------------------------------------------------
+| Personalización       | Se puede personalizar, pero       | Permite cambiar colores,         |
+|                       | algunos estilos ya vienen hechos. | tamaños y espacios con libertad. |
+------------------------------------------------------------------------------------------------
+| Tamaño final          | Puede traer estilos que no todos  | Genera estilos según las clases  |
+|                       | los elementos necesitan.          | usadas en el proyecto.           |
+------------------------------------------------------------------------------------------------
+| Casos de uso          | Bueno para formularios, menús     | Bueno para diseños personalizados|
+|                       | y páginas rápidas.                | y páginas con una identidad      |
+|                       |                                   | visual propia.                   |
+------------------------------------------------------------------------------------------------
+MEDICIÓN Y EXPERIENCIA:
+
+En la prueba con Bootstrap pude organizar las tarjetas y el menú rápidamente,
+usando clases como container, row, col e img-fluid. Esto redujo el tiempo de
+trabajo, como ya había registrado en la bitácora.
+
+En la prueba con Tailwind utilicé clases directamente en el HTML, por ejemplo
+flex, grid, p-4, rounded-xl y text-center. El archivo input.css tiene 33 líneas
+y el proyecto genera el archivo output.css automáticamente.
+
+RECOMENDACIÓN PARA RUEDA LIBRE:
+
+Recomiendo continuar con Tailwind para Rueda Libre. Aunque al comienzo se deben
+aprender más clases, permite mantener los colores, botones y tarjetas con el
+estilo propio del proyecto. Además, facilita adaptar la página a celulares,
+tabletas y computadores.
+
+Bootstrap sigue siendo una buena opción para crear una página rápidamente,
+pero Tailwind se adapta mejor a la imagen personalizada de Rueda Libre.
+
+Además quiero resaltar que durante mi elaboración del proyecto, hice modificaciones de los colores
+de las paginas que son lo siguientes:
+
+COMPARACIÓN DE COLORES ESPERADOS Y COLORES FINALES
+
+Según la paleta de esta bitácora, los colores que debían utilizarse eran:
+
+| Uso              | Color esperado | Código    |
+|------------------|-----------------|-----------|
+| Verde Ruta       | Verde           | #317F43   |
+| Naranja Pedal    | Naranja         | #EC7C26   |
+| Azul Noche       | Azul oscuro     | #191970   |
+| Crema            | Fondo principal | #FFFDD0   |
+| Blanco           | Fondo alterno   | #FFFFFF   |
+| Gris Asfalto     | Texto secundario| #5E5E5D   |
+
+En `Nocturna/componentes.html` los colores quedaron así, según la revisión de
+contraste y el análisis de clases registrado anteriormente:
+
+- Modo claro: texto #111827 sobre fondo #FFFDD0; tarjetas y campos con fondo
+  #FFFFFF.
+- Modo oscuro: fondo principal #111827 y #030712; tarjetas #1F2937 y #374151;
+  texto #F3F4F6, #D1D5DB y #FFFFFF.
+- Naranja: #EC7C26, #EA580C, #C2410C y #FB923C.
+- Verde: #22C55E, #16A34A y #15803D.
+- Amarillo: #EAB308 y #CA8A04.
+- Rojo: #EF4444 y #B91C1C.
+- Cian: #06B6D4, #164E63, #67E8F9 y #0E7490.
+- Texto secundario: #6B7280.
+
+Por tanto, `componentes.html` no terminó usando únicamente la paleta esperada:
+conservó #FFFDD0 y #EC7C26, pero incorporé tonos Gray, Orange, Green, Yellow,
+Red y Cyan de Tailwind para los modos claro, oscuro y los estados interactivos.
+
+En `DAY1.html`, los colores documentados como finales fueron:
+
+- Fondo principal: #FFF8E7.
+- Texto general: #1F2937.
+- Navegación y botones: verde con texto blanco.
+- Enlaces y títulos: Azul Noche #191970.
+- Acentos visuales: Naranja Pedal #EC7C26.
+- Fondos de contenido: #FFFFFF y tonos crema.
+
+La diferencia principal fue, entonces, que `DAY1.html` quedó con una paleta más
+cercana al diseño inicial, mientras `Nocturna/componentes.html` quedó con una
+paleta ampliada de Tailwind para soportar modo claro, modo oscuro y estados de
+los componentes.
+
