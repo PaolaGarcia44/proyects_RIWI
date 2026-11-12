@@ -1,0 +1,101 @@
+# SKILLSWAP — PROMPT MAESTRO ORGANIZADO PARA CONTINUAR EL DESARROLLO: https://desarrollo-de-skillswap.vercel.app/
+
+## 1. DESCRIPCIÓN GENERAL DEL PROYECTO
+Quiero desarrollar una aplicación web llamada **SkillSwap**, una plataforma innovadora para conectar personas que desean enseñar y aprender habilidades mediante un sistema de intercambio de conocimientos.
+
+La idea principal es que cualquier persona pueda compartir lo que sabe y aprender algo nuevo de otros usuarios, sin que necesariamente tenga que existir un intercambio directo entre dos personas.
+
+Por ejemplo:
+- María sabe diseño gráfico y quiere aprender programación.
+- Juan sabe programación y quiere aprender inglés.
+- Pedro sabe inglés y quiere aprender diseño gráfico.
+
+La plataforma debe permitir que estas personas se conecten mediante un sistema de créditos virtuales llamado **SkillCoins**.
+
+El objetivo es construir una comunidad donde el conocimiento tenga valor y las personas puedan crecer profesional y personalmente.
+
+Toda la aplicación debe estar en español, con una interfaz moderna, intuitiva, atractiva y completamente responsive.
+
+## 2. CONTEXTO Y REGLAS PRIORITARIAS
+Trabaja sobre el proyecto EXISTENTE SkillSwap, una plataforma web en español para intercambiar conocimientos mediante habilidades, sesiones y créditos internos SkillCoins. Antes de modificar código, inspecciona la estructura, dependencias, rutas, componentes, esquema de Supabase y funcionalidades actuales. No reconstruyas la aplicación desde cero, no elimines funcionalidades, no alteres innecesariamente el diseño, no sustituyas componentes funcionales ni cambies la identidad visual del Dashboard o SkillWorld. Reutiliza la arquitectura existente. Prioriza la corrección de errores de compilación y despliegue, luego implementa las funcionalidades faltantes por etapas. No afirmes haber probado, desplegado o conectado algo sin haberlo hecho realmente.
+
+El proyecto utiliza React, TypeScript, Tailwind CSS, Next.js (según el error de prerenderizado reportado) y Supabase para autenticación, base de datos y almacenamiento. Comprueba las versiones y dependencias reales antes de elegir librerías. La experiencia debe ser responsive, accesible, rápida, intuitiva y completamente en español.
+
+## 3. IDENTIDAD VISUAL Y UX
+Mantén la interfaz tecnológica, profesional, amigable y minimalista ya implementada: gradientes sutiles, tarjetas redondeadas, sombras suaves, animaciones discretas, iconos consistentes y jerarquía visual clara. Conserva los diseños de referencia existentes. Garantiza navegación por teclado, foco visible, estados vacíos, carga, éxito y error, así como diseño adaptativo en computador, tableta y móvil. Evita introducir estilos incompatibles entre páginas.
+
+## 4. LANDING PAGE
+Incluye navbar con logo, navegación, iniciar sesión y registrarse; hero con mensaje principal, subtítulo, CTA «Explorar habilidades» y «Comenzar a enseñar»; explicación «Cómo funciona» en tres pasos (compartir, conectar e intercambiar); categorías populares (programación, diseño gráfico, idiomas, marketing, música, fotografía, finanzas, cocina y tecnología); beneficios; footer con navegación, contacto, redes y derechos de autor. Todos los enlaces y CTA deben funcionar.
+
+## 5. AUTENTICACIÓN, CUENTA Y PERFIL
+Conecta registro, inicio y cierre de sesión y recuperación de contraseña a Supabase Auth. Permite editar fotografía, nombre, biografía, país, ciudad, zona horaria, idiomas, disponibilidad, modalidad virtual/presencial, habilidades que enseña o desea aprender, nivel por habilidad, portafolio, reseñas y preferencias de privacidad. Valida formularios, muestra errores reales y persiste cambios. El botón de perfil debe abrir opciones de cuenta útiles.
+
+## 6. DASHBOARD Y NAVEGACIÓN
+Conserva el Dashboard existente con bienvenida, avatar, saldo, habilidades, niveles, recomendaciones SkillMatch, próximas sesiones, solicitudes, progreso y acceso a SkillWorld. Todas las entradas de la barra lateral deben abrir vistas reales y resaltar la ruta activa: Inicio, Explorar habilidades, Mis conexiones, Mensajes, Mi progreso, SkillWorld, TeamSwap y Retos. Quita «PRONTO» únicamente en módulos implementados.
+
+Conecta los accesos rápidos: «Añadir habilidad» abre formulario persistente; «Ver movimientos» abre Saldo y movimientos; «Ver detalle» abre progreso completo; «Ver todas» muestra recomendaciones; «Conectar» envía solicitud real; «Explorar todo» abre catálogo; «Abrir mapa» abre SkillWorld; notificaciones abre su panel; perfil abre administración de cuenta. Ningún botón o icono interactivo debe ser decorativo ni simular una acción completada.
+
+## 7. EXPLORAR HABILIDADES Y AÑADIR HABILIDAD
+Crea o completa el catálogo con buscador, categorías, filtros por nivel y modalidad, tarjetas navegables y detalle individual de cada habilidad. Cada tarjeta debe mostrar descripción, nivel y mentores disponibles, con acciones funcionales para consultar detalles, encontrar mentores y conectar. «Encontrar mentores» debe mostrar resultados reales o un estado vacío explícito; nunca una pantalla sin respuesta. Permite añadir, editar y eliminar habilidades del perfil, distinguiendo «enseño» y «quiero aprender», con nivel individual y persistencia en Supabase.
+
+## 8. SKILLMATCH — RECOMENDACIONES
+Recomienda personas según habilidades ofrecidas y deseadas, niveles, disponibilidad, idioma, modalidad y ubicación aproximada cuando corresponda. Cada tarjeta debe incluir avatar, nombre, ubicación general, habilidades, niveles, porcentaje de compatibilidad, perfil y conexión. Si no existe API de IA, utiliza un algoritmo transparente de reglas y puntuaciones; no presentes sus resultados como generados por una IA externa. Prepara arquitectura extensible para integrar IA después.
+
+## 9. MIS CONEXIONES Y NOTIFICACIONES
+Crea vistas de conexiones activas, solicitudes recibidas y solicitudes enviadas. Permite enviar, aceptar, rechazar o cancelar solicitudes según permisos y estado; evita duplicados y actualiza contadores. Notifica solicitudes nuevas y aceptadas, mensajes, sesiones programadas/completadas y progreso. Permite consultar y marcar notificaciones como leídas. Guarda todos los cambios de estado en Supabase.
+
+## 10. MENSAJES Y VIDEOLLAMADAS
+Implementa una bandeja de conversaciones y una vista de chat con envío y recepción de mensajes, historial persistente en Supabase, indicadores de carga/error y orden cronológico. Al volver a entrar, los chats y mensajes deben continuar disponibles. Permite borrar u ocultar conversaciones desde la cuenta del usuario sin borrar indebidamente el historial del otro participante; define claramente el comportamiento y permisos. Incluye un botón visible de videollamada en cada conversación. Implementa la experiencia de llamada únicamente si existe integración real con un proveedor/WebRTC y permisos de cámara/micrófono; si faltan credenciales o infraestructura, deja un flujo explícito de configuración y no simules llamadas conectadas. Contempla controles de privacidad, consentimiento y estados de conexión.
+
+## 11. SKILLCOINS — SALDO Y MOVIMIENTOS
+Crea una sección «Mi saldo» accesible desde «Ver movimientos», con saldo disponible, créditos ganados, utilizados e historial de transacciones (fecha, concepto, tipo, cantidad y estado). Las clases completadas y confirmadas pueden acreditar o descontar créditos según reglas del sistema. No permitir saldos negativos, transferencias libres entre usuarios ni cambios de saldo desde el navegador. Ejecuta transacciones de forma atómica y segura en backend/Supabase, con controles contra duplicación y auditoría. Los SkillCoins son créditos internos, no dinero real.
+
+## 12. SESIONES DE APRENDIZAJE
+Permite solicitar, aceptar, programar, cancelar y confirmar sesiones, con participantes, habilidad, horario, zona horaria, duración y estado. Integra las sesiones con mensajes, notificaciones, progreso y SkillCoins. Solo modifica créditos al cumplirse las condiciones de confirmación definidas; no permitas confirmaciones duplicadas.
+
+## 13. SKILLWORLD — GLOBO TERRÁQUEO INTERACTIVO
+SkillWorld debe ser una experiencia de globo terráqueo 3D, inspirada visualmente en mapas globales tecnológicos como Azure Global, conservando el diseño existente. El prompt original también propone Leaflet + OpenStreetMap: dado que Leaflet es principalmente 2D, primero inspecciona la implementación y conserva la tecnología actual si ya ofrece el globo; si requiere 3D, elige una librería compatible con Next.js y explica el cambio antes de sustituir la visualización. No conviertas un globo funcional en un mapa plano.
+
+Funcionalidades: rotación automática y botón iniciar/detener; zoom; navegación por regiones; animaciones suaves; marcadores interactivos; agrupación en zonas densas; líneas de conexión entre perfiles compatibles; vista responsive. Al seleccionar un marcador, muestra avatar, nombre, ciudad/país, habilidades ofrecidas/deseadas, nivel, idiomas, disponibilidad, modalidad y botones «Ver perfil» y «Conectar».
+
+Incluye usuarios variados de América del Norte, América del Sur, Europa, Asia, África y Oceanía, distribuidos geográficamente. Los perfiles ficticios deben estar rotulados «Demostración» y no confundirse con usuarios reales; utiliza datos auténticos de Supabase solo cuando existan y tengan visibilidad autorizada. Usa ubicaciones aproximadas, nunca direcciones exactas. La aparición en SkillWorld debe ser voluntaria y desactivada por defecto.
+
+Buscador por nombre, habilidad, categoría, ciudad y país; filtros por disponibilidad, nivel, ubicación y modalidad; opción «Solo en línea» basada en presencia real cuando exista (o rotulada simulada en demos); botón limpiar filtros. Sincroniza filtros y selección entre globo y panel lateral: seleccionar usuario en lista centra y resalta su marcador; seleccionar marcador resalta su entrada en la lista. Muestra indicadores coherentes de perfiles representados, usuarios realmente conectados, nodos y rotación; nunca cifras ficticias presentadas como reales.
+
+## 14. SKILLLEVELS, SKILLPROGRESS Y VERIFICACIÓN
+Cada habilidad posee nivel independiente: 1 Principiante (conceptos iniciales), 2 Básico (tareas sencillas), 3 Intermedio (trabajo autónomo habitual), 4 Avanzado (proyectos complejos y orientación), 5 Experto (dominio profundo y enseñanza avanzada). Representa niveles con insignias/barras en perfil, SkillMatch, SkillWorld, búsquedas y portafolio.
+
+«Mi progreso» / SkillProgress muestra niveles por habilidad, evolución histórica, sesiones completadas, proyectos y evaluaciones. No subas niveles automáticamente por SkillCoins. Añade estados de verificación: No verificada, En proceso y Verificada. Permite adjuntar evidencias; la verificación oficial requiere validación autorizada, no solo autodeclaración.
+
+## 15. SKILLPORTFOLIO
+Permite crear, editar y consultar proyectos vinculados a habilidades, con imágenes, descripciones, enlaces, certificados y evidencias. Valida archivos y enlaces; controla permisos de edición y almacenamiento.
+
+## 16. SKILLCHALLENGES — RETOS
+Crea catálogo de retos por categoría y dificultad, con detalle, participación, entrega de resultados, comentarios, reconocimientos y logros visibles en perfil. Ejemplos: página web, logotipo, traducción, ejercicio de programación y pieza gráfica. Persiste participaciones y entregas.
+
+## 17. TEAMSWAP — GRUPOS DE APRENDIZAJE
+Permite crear y unirse a grupos, definir habilidad, horarios, objetivos, actividades y miembros. Cada grupo tiene vista de detalle, participantes y acciones de gestión según roles y permisos.
+
+## 18. SUPABASE, DATOS Y SEGURIDAD
+Conserva la integración existente. Revisa/crea las tablas y relaciones necesarias para perfiles, habilidades, categorías, niveles, portafolios, conexiones, conversaciones, mensajes, sesiones, créditos y movimientos, progreso, evaluaciones, retos, grupos, notificaciones y visibilidad geográfica. Aplica RLS a todas las tablas con datos de usuario, validación en backend y permisos de acceso mínimos. Protege archivos y mensajes; no expongas secretos en frontend. Las operaciones sensibles deben usar backend/RPC/funciones seguras. Implementa manejo de errores, índices, estados de carga y reglas de integridad. No borres datos existentes ni ejecutes migraciones destructivas sin advertirlo.
+
+## 19. DATOS DEMOSTRATIVOS
+Crea ejemplos diversos para demostrar SkillWorld, habilidades y SkillMatch (por ejemplo, Colombia, México, España, Japón y Argentina), con nombres, avatares, idiomas, niveles y disponibilidad diferentes. Marca explícitamente todos los datos de demostración y sepáralos de los perfiles reales. No falsifiques presencia en línea, movimientos de créditos ni mensajes enviados.
+
+## 20. CRITERIOS DE ACEPTACIÓN Y PRUEBAS
+Comprueba: compilación de producción sin error window/document; navegación completa en sidebar y Dashboard; formularios validados y persistentes; catálogo, tarjetas y «Encontrar mentores» funcionales; conexiones y notificaciones; mensajes guardados y borrado conforme a permisos; botón de videollamada con integración real o dependencia claramente indicada; saldo e historial coherentes; progreso y niveles; globo con rotación, zoom, marcadores, perfiles, filtros y panel sincronizado; presencia y datos demo claramente diferenciados; privacidad y RLS; interfaz responsive y accesible. Ejecuta pruebas automatizadas o manuales disponibles y especifica cuáles se realizaron realmente.
+
+## 21. ORDEN DE TRABAJO Y ENTREGABLES
+Primero: audita proyecto y soluciona el fallo de Vercel. Segundo: revisa rutas, Dashboard, botones y formularios. Tercero: completa catálogo, habilidades, perfiles, SkillMatch y conexiones. Cuarto: completa mensajes, videollamadas (si hay integración), sesiones y SkillCoins. Quinto: mejora SkillWorld sin romper su aspecto. Sexto: progreso, portafolio, retos y TeamSwap. Sé incremental: después de cada fase, verifica que las anteriores sigan funcionando.
+
+Al finalizar, entrega: (1) resumen de funcionalidades implementadas y pendientes, (2) lista de archivos modificados, (3) migraciones o configuraciones necesarias en Supabase, (4) variables de entorno requeridas sin revelar valores secretos, (5) pruebas realizadas y resultados, (6) instrucciones para ejecutar y desplegar, (7) limitaciones o servicios externos aún no configurados. Si una operación no puede implementarse con el acceso actual, explica el bloqueo y no la presentes como terminada.
+
+INSTRUCCIÓN FINAL: Trabaja sobre el código actual de SkillSwap, preserva su identidad visual y su información, prioriza funciones reales y persistentes, y evita reconstrucciones, botones sin acción o simulaciones engañosas.
+## 22. CORRECCIÓN DE ERRORES Y DESPLIEGUE EN VERCEL / NEXT.JS
+Al desplegar en Vercel aparece:
+ReferenceError: window is not defined
+Error occurred prerendering page "/skillworld".
+Export encountered an error on /skillworld/page: /skillworld.
+
+Inspecciona /skillworld y todos los componentes, hooks, módulos importados y librerías relacionados. Identifica accesos a window, document, localStorage y otras APIs del navegador durante SSR, evaluación de módulos o prerenderizado. Corrige según el origen real: usa 'use client' donde corresponda, mueve efectos de navegador a useEffect cuando proceda y carga componentes exclusivamente del navegador mediante importación dinámica con ssr: false cuando sea compatible con la arquitectura de Next.js. No asumas que 'use client' por sí solo resuelve cualquier acceso a window. Revisa otras rutas por errores equivalentes. Ejecuta la compilación de producción disponible, reporta resultados reales y no cambies la apariencia o la funcionalidad del globo.
+

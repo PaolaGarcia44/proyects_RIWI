@@ -785,3 +785,5 @@ cercana al diseño inicial, mientras `Nocturna/componentes.html` quedó con una
 paleta ampliada de Tailwind para soportar modo claro, modo oscuro y estados de
 los componentes.
 
+------------------------------------------------------------------------------------------------------
+CONTRARELOJ 1: TIEMPO REGISTRADO DE LA ACTIVIDAD ME GASTE 1 HORA 

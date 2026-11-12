@@ -278,41 +278,121 @@
             </div>
         </section>
 
-        <!-- FORMULARIO -->
-        <section id="formulario" class="p-4 md:p-8 lg:p-12 text-center">
+<!-- INSCRIPCIÓN -->
+<section id="formulario" class="p-4 md:p-8 lg:p-12">
 
-            <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto px-4">
 
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                    Formulario
-                </h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl p-3 font-bold text-center mb-6 text-white bg-gray-700 dark:bg-gray-950 dark:text-gray-100">
+            Inscripción
+        </h2>
 
-                <form class="card bg-white text-gray-900 dark:bg-gray-800 dark:text-white shadow-md max-w-md mx-auto p-6 space-y-4 border border-gray-200 dark:border-gray-700">
+        <form id="form-inscripcion" class="card flex flex-col bg-white text-gray-900 dark:bg-gray-800 dark:text-white shadow-md p-6 gap-6 border border-gray-200 dark:border-gray-700">
 
-                    <label class="form-control w-full">
-                        <span class="font-bold mb-1">Correo</span>
+            <!-- DATOS PERSONALES -->
+            <fieldset class="space-y-4">
+                <legend class="text-2xl font-bold mb-2">Tus datos</legend>
 
-                        <input type="email"
-                               placeholder="ejemplo@correo.com"
-                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500">
-                    </label>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                    <label class="form-control w-full">
-                        <span class="font-bold mb-1">Celular</span>
+                    <div class="form-control w-full">
+                        <label for="nombre" class="font-bold mb-1">Nombre completo</label>
+                        <input id="nombre" name="nombre" type="text" required minlength="3"
+                               autocomplete="name" placeholder="Tu nombre"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500 invalid:not-placeholder-shown:border-red-600">
+                        <small class="text-gray-600 dark:text-gray-300">Mínimo 3 caracteres.</small>
+                    </div>
 
-                        <input type="tel"
-                               placeholder="3001234567"
-                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500">
-                    </label>
+                    <div class="form-control w-full">
+                        <label for="celular" class="font-bold mb-1">Celular</label>
+                        <input id="celular" name="celular" type="tel" required
+                               inputmode="numeric" autocomplete="tel" maxlength="10"
+                               pattern="3[0-9]{9}" placeholder="3001234567"
+                               title="10 dígitos, empezando por 3"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500 invalid:not-placeholder-shown:border-red-600">
+                        <small class="text-gray-600 dark:text-gray-300">10 dígitos, empieza por 3.</small>
+                    </div>
 
-                    <button type="submit" class="btn-formulario">
-                        Enviar
-                    </button>
+                    <div class="form-control w-full md:col-span-2">
+                        <label for="correo" class="font-bold mb-1">Correo</label>
+                        <input id="correo" name="correo" type="email" required
+                               autocomplete="email" placeholder="ejemplo@correo.com"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500 invalid:not-placeholder-shown:border-red-600">
+                    </div>
 
-                </form>
-            </div>
-        </section>
+                </div>
+            </fieldset>
 
+            <!-- TU SALIDA -->
+            <fieldset class="space-y-4">
+                <legend class="text-2xl font-bold mb-2">Tu salida</legend>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <div class="form-control w-full">
+                        <label for="ruta" class="font-bold mb-1">Ruta</label>
+                        <select id="ruta" name="ruta" required
+                                class="select select-bordered w-full bg-white text-gray-900 border-gray-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-orange-500">
+                            <option value="">Elige una ruta</option>
+                            <option value="luces">Luces del centro · $55.000</option>
+                            <option value="miradores">Miradores de la ciudad · $75.000</option>
+                            <option value="luna">Luna en las palmas · $95.000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-control w-full">
+                        <label for="fecha" class="font-bold mb-1">Fecha</label>
+                        <input id="fecha" name="fecha" type="date" required
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 focus:outline-orange-500">
+                    </div>
+
+                    <div class="form-control w-full">
+                        <label for="acompanantes" class="font-bold mb-1">Acompañantes</label>
+                        <input id="acompanantes" name="acompanantes" type="number" required
+                               min="0" max="3" step="1" inputmode="numeric" placeholder="0 a 3"
+                               class="input input-bordered w-full bg-white text-gray-900 border-gray-300 placeholder-gray-500 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:placeholder-gray-300 focus:outline-orange-500 invalid:not-placeholder-shown:border-red-600">
+                        <small class="text-gray-600 dark:text-gray-300">Entre 0 y 3 personas.</small>
+                            </div>
+
+                    <!-- EXPERIENCIA (radios) -->
+                    <div role="radiogroup" aria-labelledby="exp-titulo" class="w-full">
+                        <p id="exp-titulo" class="font-bold mb-3">Tu experiencia en bici</p>
+                        <div class="flex flex-col gap-3">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="experiencia" value="principiante" required class="radio radio-warning">
+                                Principiante
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="experiencia" value="intermedio" class="radio radio-warning">
+                                Intermedio
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="experiencia" value="avanzado" class="radio radio-warning">
+                                Avanzado
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <!-- CONFIRMACIÓN -->
+            <fieldset class="space-y-4">
+                <legend class="text-xl font-bold mb-2">Confirmación</legend>
+
+                <label class="flex items-start gap-2 cursor-pointer">
+                    <input id="acepto" name="acepto" type="checkbox" required class="checkbox checkbox-warning mt-1">
+                    <span>Acepto llegar 15 minutos antes y usar casco.</span>
+                </label>
+            </fieldset>
+
+            <button type="submit" class="btn-formulario w-full md:w-1/2 self-center">
+                Enviar inscripción
+            </button>
+
+        </form>
+    </div>
+</section>
     </main>
 
     <!-- PIE DE PÁGINA -->
