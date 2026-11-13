@@ -758,6 +758,8 @@ contraste y el análisis de clases registrado anteriormente:
 
 - Modo claro: texto #111827 sobre fondo #FFFDD0; tarjetas y campos con fondo
   #FFFFFF.
+
+  
 - Modo oscuro: fondo principal #111827 y #030712; tarjetas #1F2937 y #374151;
   texto #F3F4F6, #D1D5DB y #FFFFFF.
 - Naranja: #EC7C26, #EA580C, #C2410C y #FB923C.
