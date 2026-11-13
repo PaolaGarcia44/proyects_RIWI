@@ -787,3 +787,4 @@ los componentes.
 
 ------------------------------------------------------------------------------------------------------
 CONTRARELOJ 1: TIEMPO REGISTRADO DE LA ACTIVIDAD ME GASTE 1 HORA 
+CONTRARELOJ 2: TIEMPO REGISTRADO DE LA ACTIVIDAD ME GASTE 40 MINUTOS
